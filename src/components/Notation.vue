@@ -139,7 +139,7 @@ export default {
   computed: {
   },
   mounted () {
-    this.showChord({f3: 'sharp', g3: 'natural', a4: 'natural', c4: 'natural'})
+    this.showChord({c3: 'natural', e3: 'natural', g3: 'natural'})
   },
   methods: {
     showChord: function (notes) {

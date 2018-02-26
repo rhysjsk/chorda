@@ -1,7 +1,10 @@
 <template>
   <div class="hello">
+    <Menu />
     <Notation />
     <Chromatic />
+    <Metronome />
+    <Keyboard />
   </div>
 </template>
 
@@ -9,6 +12,9 @@
 
 import Notation from './Notation.vue'
 import Chromatic from './Chromatic.vue'
+import Metronome from './Metronome.vue'
+import Menu from './Menu.vue'
+import Keyboard from './Keyboard.vue'
 
 export default {
   name: 'HelloWorld',
@@ -19,7 +25,10 @@ export default {
   },
   components: {
     Notation,
-    Chromatic
+    Chromatic,
+    Metronome,
+    Menu,
+    Keyboard
   }
 }
 </script>

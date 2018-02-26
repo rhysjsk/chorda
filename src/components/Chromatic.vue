@@ -116,10 +116,40 @@
          <path d="m45.132 192.71q0.50486 0.12836 0.77869 0.49631t0.27382 0.96694q0 0.77869-0.47064 1.2322-0.47064 0.44496-1.2921 0.44496h-2.1221v-5.8359h1.9253q0.77869 0 1.2237 0.41073 0.44496 0.40218 0.44496 1.0782 0 0.43641-0.19681 0.75302-0.19681 0.30805-0.56476 0.45352zm-2.1906-0.20537h1.3606q0.9156 0 0.9156-1.0012 0-0.45352-0.26527-0.70168-0.26527-0.24815-0.7359-0.24815h-1.275zm1.3948 2.8153q0.54765 0 0.8557-0.30806 0.31661-0.30805 0.31661-0.83859 0-0.53053-0.31661-0.83003-0.30805-0.30805-0.8557-0.30805h-1.3948v2.2847z"  stroke-width=".077705"/>
         </g>
       </g>
-      <path d="m108.78 268.45a56.845 56.845 0 0 1-56.058 17.639" fill="none" stroke="#12a077" stroke-linecap="round" stroke-width=".98835"/>
-      <circle cx="66.146" cy="230.85" r="1.6352" fill="none" stroke="#12a077" stroke-linecap="round" stroke-width=".758"/>
-      <circle cx="66.146" cy="230.85" r=".43253" fill="none" stroke="#12a077" stroke-linecap="round" stroke-width=".758"/>
-      <g id="fifth-text-outer" class="text-outer">
+      <!-- <path d="m108.78 268.45a56.845 56.845 0 0 1-56.058 17.639" fill="none" stroke="#12a077" stroke-linecap="round" stroke-width=".98835"/> -->
+      <g id="circle-arc-1-1" class="circle-arc">
+       <rect x="2.6458" y="167.35" width="127" height="127" rx="0" ry="0" fill-opacity="0"/>
+       <path d="m72.727 174.39a56.845 56.845 0 0 1 16.654 4.5831" fill="none" stroke="#12a077" stroke-linecap="round" stroke-width=".98835"/>
+      </g>
+      <g id="circle-arc-1-2" class="circle-arc">
+       <rect x="2.6458" y="167.35" width="127" height="127" rx="0" ry="0" fill-opacity="0"/>
+       <path d="m72.727 174.39a56.845 56.845 0 0 1 16.654 4.5831" fill="none" stroke="#12a077" stroke-linecap="round" stroke-width=".98835"/>
+      </g>
+      <g id="circle-arc-2-1" class="circle-arc">
+       <rect x="2.6458" y="167.35" width="127" height="127" rx="0" ry="0" fill-opacity="0"/>
+       <path d="m72.727 174.39a56.845 56.845 0 0 1 38.556 21.908" fill="none" stroke="#12a077" stroke-linecap="round" stroke-width=".98835"/>
+      </g>
+      <g id="circle-arc-2-2" class="circle-arc">
+       <rect x="2.6458" y="167.35" width="127" height="127" rx="0" ry="0" fill-opacity="0"/>
+       <path d="m72.727 174.39a56.845 56.845 0 0 1 38.556 21.908" fill="none" stroke="#12a077" stroke-linecap="round" stroke-width=".98835"/>
+      </g>
+      <g id="circle-arc-3-1" class="circle-arc" >
+       <rect x="2.6458" y="167.35" width="127" height="127" rx="0" ry="0" fill-opacity="0"/>
+       <path d="m72.727 174.39a56.845 56.845 0 0 1 49.714 48.577" fill="none" stroke="#12a077" stroke-linecap="round" stroke-width=".98835"/>
+      </g>
+      <g id="circle-arc-3-2" class="circle-arc" >
+       <rect x="2.6458" y="167.35" width="127" height="127" rx="0" ry="0" fill-opacity="0"/>
+       <path d="m72.727 174.39a56.845 56.845 0 0 1 49.714 48.577" fill="none" stroke="#12a077" stroke-linecap="round" stroke-width=".98835"/>
+      </g>
+      <g id="circle-arc-4-1" class="circle-arc">
+       <rect x="2.6458" y="167.35" width="127" height="127" rx="0" ry="0" fill-opacity="0"/>
+       <path d="m72.727 174.39a56.845 56.845 0 0 1 41.809 26.634 56.845 56.845 0 0 1 5.0095 49.318" fill="none" stroke="#12a077" stroke-linecap="round" stroke-width=".98835"/>
+      </g>
+      <g id="circle-arc-4-2" class="circle-arc">
+       <rect x="2.6458" y="167.35" width="127" height="127" rx="0" ry="0" fill-opacity="0"/>
+       <path d="m72.727 174.39a56.845 56.845 0 0 1 41.809 26.634 56.845 56.845 0 0 1 5.0095 49.318" fill="none" stroke="#12a077" stroke-linecap="round" stroke-width=".98835"/>
+      </g>
+      <g id="fifth-text-outer" class="text-outer" :active="increments.fifth">
        <rect x="2.6458" y="167.35" width="127" height="127" rx="0" ry="0" fill-opacity="0"/>
        <g id="fifth-text-inner" class="text-inner">
         <g transform="translate(0 -56.337)" fill="#00787d" font-family="sans-serif" letter-spacing="0px" stroke-width=".078107" word-spacing="0px">
@@ -128,7 +158,7 @@
         </g>
        </g>
       </g>
-      <g id="seventh-text-outer" class="text-outer">
+      <g id="seventh-text-outer" class="text-outer" :active="increments.seventh">
        <rect x="2.6458" y="167.35" width="127" height="127" rx="0" ry="0" fill-opacity="0"/>
        <g id="seventh-text-inner" class="text-inner">
         <g transform="translate(0 -56.337)" fill="#00787d" font-family="sans-serif" letter-spacing="0px" stroke-width=".078107" word-spacing="0px">
@@ -137,12 +167,20 @@
         </g>
        </g>
       </g>
-      <g id="third-text-outer" class="text-outer">
+      <g id="third-text-outer" class="text-outer" :active="increments.third">
        <rect x="2.6458" y="167.35" width="127" height="127" rx="0" ry="0" fill-opacity="0"/>
        <g id="third-text-inner" class="text-inner">
         <g transform="translate(0 -56.337)" fill="#00787d" font-family="sans-serif" letter-spacing="0px" stroke-width=".078107" word-spacing="0px">
          <text x="62.8241" y="233.58005" font-size="8.1859px" style="line-height:1.25" xml:space="preserve"><tspan x="62.8241" y="233.58005" fill="#00787d" font-family="'Didact Gothic'" stroke-width=".078107">3</tspan></text>
          <text x="66.747368" y="230.41623" font-size="4.887px" style="line-height:1.25" xml:space="preserve"><tspan x="66.747368" y="230.41623" fill="#00787d" font-family="'Didact Gothic'" stroke-width=".078107">rd</tspan></text>
+        </g>
+       </g>
+      </g>
+      <g id="root-text-outer" class="text-outer" :active="increments.root">
+       <rect x="2.6458" y="167.35" width="127" height="127" rx="0" ry="0" fill-opacity="0"/>
+       <g id="root-text-inner" class="text-inner">
+        <g transform="translate(0 -56.337)">
+         <text x="60.157009" y="232.78137" fill="#00787d" font-family="sans-serif" font-size="8.1859px" letter-spacing="0px" stroke-width=".078107" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan x="60.157009" y="232.78137" fill="#00787d" font-family="'Didact Gothic'" font-size="6.35px" stroke-width=".078107">root</tspan></text>
         </g>
        </g>
       </g>
@@ -155,24 +193,14 @@
 
 import anime from 'animejs'
 
-const KEY_STEPS = [ ['bsharp',  'c'], 
-                    ['dflat',   'csharp'], 
-                    ['d'], 
-                    ['eflat',   'dsharp'], 
-                    ['fflat',   'e'], 
-                    ['esharp',  'f'], 
-                    ['gflat',   'fsharp'], 
-                    ['g'], 
-                    ['aflat',   'gsharp'], 
-                    ['a'], 
-                    ['bflat',   'asharp'], 
-                    ['cflat',   'b']]
+const KEY_INCREMENTS = ['root', 'third', 'fifth', 'seventh']
+const KEY_STEPS = [['bsharp', 'c'], ['dflat', 'csharp'], ['d'], ['eflat', 'dsharp'], ['fflat', 'e'], ['esharp', 'f'], ['gflat', 'fsharp'], ['g'], ['aflat', 'gsharp'], ['a'], ['bflat', 'asharp'], ['cflat', 'b']]
 const STEP_ANG = 30
 
 export default {
   name: 'Chromatic',
   mounted () {
-    setTimeout(this.setKeys, 100, {root: 'c', third: 'dsharp', fifth: 'g', seventh: 'bflat'})    
+    setTimeout(this.setKeys, 100, {root: 'c', third: 'eflat', fifth: 'g'})
   },
   updated () {
     let duration = 500
@@ -180,20 +208,29 @@ export default {
     anime({ targets: '.key-text[active="active"]', opacity: 1, easing: 'easeInOutCubic', delay: delay, duration: duration })
     anime({ targets: '.key-text[active="inactive"]', opacity: 0.32, easing: 'easeInOutCubic', delay: delay, duration: duration })
     anime({ targets: '.key-text[active="off"]', opacity: 0, easing: 'easeInOutCubic', delay: delay, duration: duration })
-    anime({ targets: 'ellipse[active="active"]', fill: "#ffffff", easing: 'easeInOutCubic', delay: delay, duration: duration })
-    anime({ targets: 'ellipse[active="inactive"]', fill: "#c7eff1", easing: 'easeInOutCubic', delay: delay, duration: duration })
+    anime({ targets: 'ellipse[active="active"]', fill: '#ffffff', easing: 'easeInOutCubic', delay: delay, duration: duration })
+    anime({ targets: 'ellipse[active="inactive"]', fill: '#c7eff1', easing: 'easeInOutCubic', delay: delay, duration: duration })
   },
   data () {
     return {
-        steps:[],
-        notes:{c:'off'}
+      steps: [],
+      notes: {c: 'off'},
+      increments: {root: 'off'}
     }
   },
   methods: {
-    setKeys: function(keys){
+    setKeys: function (keys) {
       let duration = 500
       let delay = 500
-      keyloop: for (let i = 0; i < KEY_STEPS.length; i++) {
+      let oldKeyStep = null
+
+      let availableArcs = []
+      for (let i = 1; i <= 5; i++) { availableArcs.push(1) }
+
+      for (let i = 0; i < KEY_INCREMENTS.length; i++) {
+        this.increments[KEY_INCREMENTS[i]] = 'off'
+      }
+      for (let i = 0; i < KEY_STEPS.length; i++) {
         let keyStep = KEY_STEPS[i]
         let j = null
         this.steps[i] = 'inactive'
@@ -203,19 +240,33 @@ export default {
             if (keys[key] === keyStep[j]) {
               this.notes[keyStep[j]] = 'active'
               this.steps[i] = 'active'
-              let rotateAng = i * STEP_ANG;
+              let diffKeyStep = i - oldKeyStep
+              if (oldKeyStep !== null && diffKeyStep > 0) {
+                let arc = diffKeyStep + '-' + availableArcs[diffKeyStep]++
+                anime({ targets: '#circle-arc-' + arc, rotate: oldKeyStep * STEP_ANG, easing: 'easeInOutCubic', delay: delay, duration: duration })
+                anime({
+                  targets: '#circle-arc-' + arc + ' path',
+                  strokeDashoffset: [anime.setDashoffset, 0],
+                  opacity: 1,
+                  easing: 'easeInOutCubic',
+                  duration: duration,
+                  delay: delay * 2
+                })
+              }
+              oldKeyStep = i
+              this.increments[key] = "active"
+              let rotateAng = i * STEP_ANG
               anime({ targets: '#' + key + '-text-outer', rotate: rotateAng, easing: 'easeInOutCubic', delay: delay, duration: duration })
               anime({ targets: '#' + key + '-text-inner', rotate: -rotateAng, easing: 'easeInOutCubic', delay: delay, duration: duration })
             }
           }
-          if (this.steps[i] !== 'active') this.notes[keyStep[j]] = (j === (keyStep.length-1))? 'inactive' : 'off'
-        } 
+          if (this.steps[i] !== 'active') this.notes[keyStep[j]] = (j === (keyStep.length - 1)) ? 'inactive' : 'off'
+        }
       }
     }
   }
 }
 </script>
-
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 h1, h2 {
@@ -232,7 +283,23 @@ li {
 a {
   color: #42b983;
 }
-.text-outer, .text-inner{
+.text-outer, .text-inner, .circle-arc{
   transform-origin:50% 50%;
 }
+.circle-arc path {
+  opacity: 0;
+}
+[active="off"] {
+  opacity: 0;
+}
+.text-outer {
+  opacity:0;
+}
+@keyframes fadein {
+  100% {opacity: 1;}
+} 
+.text-outer[active="active"] {
+  transition: opacity 0.25s ease-out;
+}
+
 </style>
