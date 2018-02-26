@@ -254,7 +254,7 @@ export default {
                 })
               }
               oldKeyStep = i
-              this.increments[key] = "active"
+              this.increments[key] = 'active'
               let rotateAng = i * STEP_ANG
               anime({ targets: '#' + key + '-text-outer', rotate: rotateAng, easing: 'easeInOutCubic', delay: delay, duration: duration })
               anime({ targets: '#' + key + '-text-inner', rotate: -rotateAng, easing: 'easeInOutCubic', delay: delay, duration: duration })
@@ -297,7 +297,7 @@ a {
 }
 @keyframes fadein {
   100% {opacity: 1;}
-} 
+}
 .text-outer[active="active"] {
   transition: opacity 0.25s ease-out;
 }
