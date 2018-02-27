@@ -1,7 +1,8 @@
 <template>
   <div id="keyboard">
-    <svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="100" width="440" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
-      <g stroke="#202020" stroke-linecap="round" stroke-dasharray="none" stroke-miterlimit="4" stroke-width="1.28102171" transform="translate(0,-952.36218)">
+    <svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="250" width="840" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <g transform="scale(1.6, 1.6)">
+      <g stroke="#202020" stroke-linecap="round" stroke-dasharray="none" stroke-miterlimit="4" stroke-width="1.28102171" transform="translate(0,-932.36218)">
         <path id="b5" d="m418.52,953.01,0,3.2162,0,63.237,0,29.056c0,1.7786,1.4805,3.2052,3.3262,3.2052h14.18c1.8457,0,3.3377-1.4266,3.3377-3.2052v-29.056-63.237-3.2162h-3.3377-14.18-3.3262z" fill="#9cc8cb"/>
         <path id="f4" d="m355.83,953.01,0,3.2162,0,63.237,0,29.056c0,1.7786,1.4805,3.2052,3.3262,3.2052h14.18c1.8457,0,3.3377-1.4266,3.3377-3.2052v-29.056-63.237-3.2162h-3.3377-14.18-3.3262z" fill="#9cc8cb"/>
         <path id="e4" d="m334.94,953.01,0,3.2162,0,63.237,0,29.056c0,1.7786,1.4805,3.2052,3.3262,3.2052h14.18c1.8457,0,3.3377-1.4266,3.3377-3.2052v-29.056-63.237-3.2162h-3.3377-14.18-3.3262z" fill="#9cc8cb"/>
@@ -39,18 +40,99 @@
         <path id="a3-sharp" d="m119.44,953,0,2.1182,0,42.82,0,17.955c0,1.1712,0.9713,2.1183,2.1868,2.1183h6.4568c1.2155,0,2.1983-0.9471,2.1983-2.1183v-17.955-42.82-2.1182h-2.1983-6.4568-2.1868z" fill="#1c6c70"/>
         <path id="d2-sharp" d="m36.901,953,0,2.1182,0,42.82,0,17.955c0,1.1712,0.9713,2.1183,2.1868,2.1183h6.4568c1.2155,0,2.1983-0.9471,2.1983-2.1183v-17.955-42.82-2.1182h-2.1983-6.4568-2.1868z" fill="#1c6c70"/>
       </g>
+      <g id="key-0" :transform="translateKey0" fill="#ff0000" :pitch="keys[0].pitch">
+          <text class="accidental accented-note" font-family="Didact Gothic" font-size="12px">{{keys[0].note}}</text>
+          <text class="accidental natural-note" font-family="Didact Gothic" font-size="14px" x="4">{{keys[0].note}}</text>
+          <text class="accidental flat" font-family="Tahoma" font-size="10px" x="6.5">♭</text>
+          <text class="accidental sharp" font-family="Tahoma" font-size="10px" x="6.5">♯</text>
+          <text font-family="Didact Gothic" font-size="12px" y="-115">{{keys[0].finger}}</text>
+      </g>
+      <g id="key-1" :transform="translateKey1" fill="#ff0000" :pitch="keys[1].pitch">
+          <text class="accidental accented-note" font-family="Didact Gothic" font-size="12px">{{keys[1].note}}</text>
+          <text class="accidental natural-note" font-family="Didact Gothic" font-size="14px" x="4">{{keys[1].note}}</text>
+          <text class="accidental flat" font-family="Tahoma" font-size="10px" x="6.5">♭</text>
+          <text class="accidental sharp" font-family="Tahoma" font-size="10px" x="6.5">♯</text>
+          <text font-family="Didact Gothic" font-size="12px" y="-115">{{keys[0].finger}}</text>
+      </g>
+      <g id="key-2" :transform="translateKey2" fill="#ff0000" :pitch="keys[2].pitch">
+          <text class="accidental accented-note" font-family="Didact Gothic" font-size="12px">{{keys[2].note}}</text>
+          <text class="accidental natural-note" font-family="Didact Gothic" font-size="14px" x="4">{{keys[2].note}}</text>
+          <text class="accidental flat" font-family="Tahoma" font-size="10px" x="6.5">♭</text>
+          <text class="accidental sharp" font-family="Tahoma" font-size="10px" x="6.5">♯</text>
+          <text font-family="Didact Gothic" font-size="12px" y="-115">{{keys[0].finger}}</text>
+      </g>
+    </g>
     </svg>
   </div>
 </template>
 <script>
+// ({c3: 'natural', e3: 'natural', g3: 'natural'})
+
+const KEY_SEQUENCE = 'abcdefg'
+const OCTAVE_WIDTH = 100
+const KEY_WIDTH = 8.5
+
 export default {
   name: 'Keyboard',
   data () {
     return {
-
+      keys: [{pos:0}, {pos:0}, {pos:0}, {pos:0}]
+    }
+  },
+  computed: {
+    translateKey0: function () {
+      return 'translate(' + this.keys[0].pos + ', 130)'
+    },
+    translateKey1: function () {
+      if (this.keys[1]) return 'translate(' + this.keys[1].pos + ', 130)'
+      return 0
+    },
+    translateKey2: function () {
+      if (this.keys[2]) return 'translate(' + this.keys[2].pos + ', 130)'
+      return 0
+    }
+  },
+  mounted () {
+    this.showKeys({c3: 'natural', e3: 'natural', g3: 'natural'})
+  },
+  methods: {
+    showKeys: function (keys) {
+      let currFinger = 1
+      // let oldPosition = null
+      this.keys = []
+      for (let k in keys) {
+        let key = k.slice(0, 1)
+        let octave = k.slice(1, 2)
+        let accent = keys[k]
+        let position = (octave - 2) * OCTAVE_WIDTH + (this.getKeySequence(key) + this.getAccentShift(accent)) * KEY_WIDTH
+        this.keys.push({note: key.toUpperCase(), pos: position, pitch: accent, finger: currFinger})
+      }
+    },
+    getKeySequence: function (key) {
+      return KEY_SEQUENCE.indexOf(key)
+    },
+    getAccentShift: function (accent) {
+      switch (accent) {
+        case 'sharp': return 0.5
+        case 'flat': return -0.5
+        default: return 0
+      }
     }
   }
 }
 </script>
 <style>
+.accidental {
+  opacity:0;
+}
+[pitch="sharp"] .sharp, [pitch="sharp"] .accented-note {
+  opacity: 1;
+}
+[pitch="flat"] .flat, [pitch="flat"] .accented-note {
+  opacity: 1;
+}
+[pitch="natural"] .natural-note {
+  opacity: 1;
+}
+
 </style>
