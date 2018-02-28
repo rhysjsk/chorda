@@ -1,7 +1,7 @@
 <template>
   <div id="metronome">
-    <div id="button-play" class="button" :state="playState" v-on:click="togglePlayPause"></div>
     <div id="button-audio" class="button" :state="audioState" v-on:click="toggleAudio"></div>
+    <div id="button-play" class="button" :state="playState" v-on:click="togglePlayPause"></div>
     <div id="metronome-ticks">
       <div class="tick" :active="tickCount1"></div>
       <div class="tick" :active="tickCount2"></div>
@@ -70,11 +70,21 @@ export default {
 .clearfix {
   clear:both;
 }
+#button-play {
+  width:50px;
+  background-position: 25px 5px;
+}
+#button-play, #button-audio {
+  background-repeat: no-repeat;
+}
 #button-play[state='paused'] {
   background-image:url('../../static/icon-play.svg');
 }
 #button-play[state='playing'] {
   background-image:url('../../static/icon-pause.svg');
+}
+#button-audio {
+  background-position: 10px 5px;
 }
 #button-audio[state='off'] {
   background-image:url('../../static/icon-audio-off.svg');
@@ -87,13 +97,15 @@ export default {
 }
 #metronome-ticks {
   overflow:auto;
+  width:160px;
+  float:left;
 }
 .tick {
-  width: 10px;
-  height: 10px;
-  border-radius: 5px;
-  background-color: black;
-  margin:5px;
+      width: 16px;
+    height: 16px;
+    border-radius: 10px;
+    background-color: black;
+    margin: 10px;
   float:left;
   display:none;
 }

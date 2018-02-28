@@ -1,5 +1,5 @@
 <template>
-  <div class="chromatic">
+  <div id="chromatic">
     <svg width="500" height="500" version="1.1" viewBox="0 0 132.29 132.29" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
      <g transform="translate(0 -164.71)">
       <circle cx="66.146" cy="230.85" r="43.597" fill="none" stroke="#12a077" stroke-linecap="round" stroke-width=".758"/>
@@ -193,6 +193,7 @@
 
 import anime from 'animejs'
 
+const KEY_SEQUENCE = 'cdefgab'
 const KEY_INCREMENTS = ['root', 'third', 'fifth', 'seventh']
 const KEY_STEPS = [['bsharp', 'c'], ['dflat', 'csharp'], ['d'], ['eflat', 'dsharp'], ['fflat', 'e'], ['esharp', 'f'], ['gflat', 'fsharp'], ['g'], ['aflat', 'gsharp'], ['a'], ['bflat', 'asharp'], ['cflat', 'b']]
 const STEP_ANG = 30
@@ -200,8 +201,9 @@ const STEP_ANG = 30
 export default {
   name: 'Chromatic',
   mounted () {
-    setTimeout(this.setKeys, 100, {root: 'c', third: 'eflat', fifth: 'g'})
+    // setTimeout(this.setKeys, 100, {root: 'c', third: 'eflat', fifth: 'g'})
   },
+  props: ['bus'],
   updated () {
     let duration = 500
     let delay = 500
@@ -211,6 +213,11 @@ export default {
     anime({ targets: 'ellipse[active="active"]', fill: '#ffffff', easing: 'easeInOutCubic', delay: delay, duration: duration })
     anime({ targets: 'ellipse[active="inactive"]', fill: '#c7eff1', easing: 'easeInOutCubic', delay: delay, duration: duration })
   },
+  created () {
+    this.bus.$on('showChord', (args) => {
+      this.showChord(args.chord)
+    })
+  },
   data () {
     return {
       steps: [],
@@ -218,8 +225,31 @@ export default {
       increments: {root: 'off'}
     }
   },
+  // {c3: 'natural', e3: 'natural', g3: 'natural', a4:'flat'}
   methods: {
-    setKeys: function (keys) {
+    showChord: function (keys) {
+      console.log('KEYS:', keys)
+      let c = 0
+      let chord = {}
+      for (let k in keys) {
+        let key = k.slice(0, 1)
+        let accent = keys[k]
+        let accentShift = 0
+        switch (accent) {
+          case 'sharp':
+            if (key === 'e' || key === 'b') accentShift = 1
+            else accentShift = 0.5
+            break
+          case 'flat':
+            if (key === 'f' || key === 'c') accentShift = -1
+            else accentShift = -0.5
+            break
+        }
+        let keyCount = KEY_SEQUENCE.indexOf(key) + accentShift
+        console.log('KEY:', (key + ((false) ? accent : '')))
+        chord[KEY_INCREMENTS[c++]] = key + ((accent !== 'natural') ? accent : '')
+      }
+      console.log('CHORD:', chord)
       let duration = 500
       let delay = 500
       let oldKeyStep = null
@@ -236,8 +266,8 @@ export default {
         this.steps[i] = 'inactive'
         for (j = 0; j < keyStep.length; j++) {
           this.notes[keyStep[j]] = 'off'
-          for (let key in keys) {
-            if (keys[key] === keyStep[j]) {
+          for (let key in chord) {
+            if (chord[key] === keyStep[j]) {
               this.notes[keyStep[j]] = 'active'
               this.steps[i] = 'active'
               let diffKeyStep = i - oldKeyStep
@@ -300,6 +330,9 @@ a {
 }
 .text-outer[active="active"] {
   transition: opacity 0.25s ease-out;
+}
+#chromatic {
+  width:500px;
 }
 
 </style>

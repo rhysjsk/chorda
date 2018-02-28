@@ -1,27 +1,46 @@
 <template>
   <div id="menu">
-    <div>{{settings}}</div>
-    <div>{{settings.styles.beginner}}</div>
     <div id="options-styles" class="menu-row">
+      <div class="menu-title">
+        Presets
+      </div>
       <div v-for="(option, key) in settings.styles" v-on:click="onStyleSelect(key)" v-bind:key="key" :state="settings.styles[key]?'selected':'unselected'" class="button">
         {{capitaliseText(key)}}
       </div>
+      <div class="clearfix"></div>
     </div>
+    <div class="menu-divider"></div>
     <div id="options-keys" class="menu-row">
+      <div class="menu-title">
+        Keys
+      </div>
       <div v-for="(option, key) in settings.keys" v-on:click="onKeySelect(key)" :state="settings.keys[key]?'selected':'unselected'" v-bind:key="key" class="button">{{capitaliseText(key)}}
       </div>
+      <div class="clearfix"></div>
     </div>
     <div id="options-chords" class="menu-row">
+      <div class="menu-title">
+        Chords
+      </div>
       <div v-for="(option, key) in settings.chords" v-on:click="onChordSelect(key)" :state="settings.chords[key]?'selected':'unselected'" v-bind:key="key" class="button">{{capitaliseText(key)}}
       </div>
+      <div class="clearfix"></div>
     </div>
     <div id="options-modes" class="menu-row">
+      <div class="menu-title">
+        Modes
+      </div>
       <div v-for="(option, key) in settings.modes" v-on:click="onModeSelect(key)" :state="settings.modes[key]?'selected':'unselected'" v-bind:key="key" class="button">{{capitaliseText(key)}}
       </div>
+      <div class="clearfix"></div>
     </div>
     <div id="options-periods" class="menu-row">
+      <div class="menu-title">
+        Periods
+      </div>
       <div v-for="(option, key) in settings.periods" v-on:click="onPeriodSelect(key)" :state="settings.periods[key]?'selected':'unselected'" v-bind:key="key" class="button">{{capitaliseText(key)}}
       </div>
+      <div class="clearfix"></div>
     </div>
   </div>
 </template>
@@ -116,6 +135,25 @@ export default {
 }
 </script>
 <style>
+#menu {
+  background-color: #1c6c70;
+  padding: 10px;
+}
+.menu-title {
+  color:white;
+  float:left;
+  width:80px;
+  text-align:right;
+  margin-right:10px;
+  padding:5px 0;
+  font-size:20px;
+}
+.menu-divider {
+  width:98%;
+  height:1px;
+  background-color: rgba(255,255,255,0.3);
+  margin:7px auto 5px;
+}
 .button {
   background-color:#9cc8cb;
   font-size:20px;
@@ -124,6 +162,7 @@ export default {
   margin:2px 2px 0 0;
   float:left;
   cursor:pointer;
+  text-align:center;
 }
 .button:hover {
   background-color:#bcdadc;
@@ -131,5 +170,8 @@ export default {
 [state="selected"] {
   background-color:white;
   color:black;
+}
+.clearfix {
+  clear:both;
 }
 </style>
