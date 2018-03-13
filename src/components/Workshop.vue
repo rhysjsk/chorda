@@ -2,15 +2,15 @@
   <div class="workshop">
     <Menu />
     <div class="col">
-      <Metronome />
-      <Chord />
-      <Notation :bus="bus"/>
+      <!-- <Metronome /> -->
+      <!-- <Chord /> -->
+      <!-- <Notation :bus="bus"/> -->
     </div>
     <div class="col">
-      <Keyboard :bus="bus"/>
+      <!-- <Keyboard :bus="bus"/> -->
       <div class="row">
         <Chromatic :bus="bus"/>
-        <Description />
+        <!-- <Description /> -->
         <div class="clearfix"></div>
       </div>
     </div>
@@ -33,22 +33,31 @@ export default {
   name: 'Workshop',
   data () {
     return {
-      bus: new Vue()
+      bus: new Vue(),
+      menuSettings: Menu.data
     }
   },
   components: {
-    Notation,
-    Chromatic,
-    Metronome,
-    Menu,
-    Keyboard,
-    Chord,
-    Description
+    // Notation,
+    Chromatic
+    // Metronome,
+    // Menu,
+    // Keyboard,
+    // Chord,
+    // Description
   },
   mounted () {
     this.bus.$emit('showChord', {
-      chord: {f3: 'natural', c3: 'natural', a4: 'natural'}
-    })
+      chord: {
+        id: 'cmaj',
+        name: ' C',
+        subtitle: 'maj',
+        desc: {title: 'The classic C Major', body: 'This is the most common, and basic, chord, the root triad in the C major scale.'},
+        structure: {c3: {pitch: 'natural', finger: '1'}, e3: {pitch: 'natural', finger: '3'}, g3: {pitch: 'natural', finger: '5'}, a4: {pitch: 'sharp'}}
+      }
+    }
+    )
+    console.log('Menu:', this.menuSettings().settings)
   }
 }
 </script>
@@ -70,12 +79,12 @@ a {
   color: #42b983;
 }
 .col {
-  float:left;
+  /* float:left; */
 }
 .clearfix {
-  clear:both;
+  /* clear:both; */
 }
 #chromatic, #description {
-  float:left;
+  /* float:left; */
 }
 </style>

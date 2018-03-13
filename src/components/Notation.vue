@@ -132,7 +132,6 @@ export default {
   name: 'Notation',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App',
       notes: notes
     }
   },
@@ -148,7 +147,8 @@ export default {
     })
   },
   methods: {
-    showChord: function (notes) {
+    showChord: function (chord) {
+      let notes = chord.structure
       let i = null
       for (i in notes) {
         if (this.hasEarlier(i)) {

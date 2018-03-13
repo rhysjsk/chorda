@@ -77,8 +77,8 @@ const OPTIONS_STYLES = {
 
 const OPTIONS_KEYS = ['c', 'd', 'e', 'f', 'g', 'a', 'b']
 const OPTIONS_CHORDS = ['triads', 'tetrads']
-const OPTIONS_MODES = ['Major', 'Minor', 'Dominant', 'Suspended']
-const OPTIONS_PERIODS = ['Whole', 'Half', 'Quarter', 'Eighth']
+const OPTIONS_MODES = ['major', 'minor', 'dominant', 'suspended']
+const OPTIONS_PERIODS = ['whole', 'half', 'quarter', 'eighth']
 
 var originalSettings = {}
 originalSettings.keys = {}
@@ -115,6 +115,8 @@ export default {
   methods: {
     onModeSelect: function (option, event) {
       Vue.set(this.settings.modes, option, !this.settings.modes[option])
+      this.$store.commit('increment')
+      console.log('STORE:', this.$store.state.count)
     },
     onPeriodSelect: function (option, event) {
       Vue.set(this.settings.periods, option, !this.settings.periods[option])
@@ -126,7 +128,35 @@ export default {
       Vue.set(this.settings.keys, option, !this.settings.keys[option])
     },
     onStyleSelect: function (option, event) {
-      Vue.set(this.settings.styles, option, !this.settings.styles[option])
+      for (let k in this.settings.styles) {
+        this.settings.styles[k] = false
+      }
+      Vue.set(this.settings.styles, option, true)
+      let selectedStyle = OPTIONS_STYLES[option]
+      for (let i in this.settings.keys) {
+        this.settings.keys[i] = false
+      }
+      for (let i = 0; i < selectedStyle.keys.length; i++) {
+        this.settings.keys[selectedStyle.keys[i]] = true
+      }
+      for (let i in this.settings.chords) {
+        this.settings.chords[i] = false
+      }
+      for (let i = 0; i < selectedStyle.chords.length; i++) {
+        this.settings.chords[selectedStyle.chords[i]] = true
+      }
+      for (let i in this.settings.modes) {
+        this.settings.modes[i] = false
+      }
+      for (let i = 0; i < selectedStyle.modes.length; i++) {
+        this.settings.modes[selectedStyle.modes[i]] = true
+      }
+      for (let i in this.settings.periods) {
+        this.settings.periods[i] = false
+      }
+      for (let i = 0; i < selectedStyle.periods.length; i++) {
+        this.settings.periods[selectedStyle.periods[i]] = true
+      }
     },
     capitaliseText: function (string) {
       return string.charAt(0).toUpperCase() + string.slice(1)
@@ -166,6 +196,13 @@ export default {
 }
 .button:hover {
   background-color:#bcdadc;
+  color:black;
+}
+[state="selected"].button:hover {
+  background-color:#ddf5f7;
+}
+#options-styles [state="selected"]:hover {
+  background-color:white;
 }
 [state="selected"] {
   background-color:white;

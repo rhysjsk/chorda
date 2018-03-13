@@ -23,7 +23,7 @@
         <path id="k-g3-sharp" d="m246.26,953,0,2.1182,0,42.82,0,17.955c0,1.1712,0.97129,2.1183,2.1868,2.1183h6.4568c1.2155,0,2.1983-0.9471,2.1983-2.1183v-17.955-42.82-2.1182h-2.1983-6.4568-2.1868z" fill="#1c6c70"/>
         <path id="k-a4-sharp" d="m265.85,953,0,2.1182,0,42.82,0,17.955c0,1.1712,0.97129,2.1183,2.1868,2.1183h6.4568c1.2155,0,2.1983-0.9471,2.1983-2.1183v-17.955-42.82-2.1182h-2.1983-6.4568-2.1868z" fill="#1c6c70"/>
         <rect id="k-g4" ry="3.2103" height="98.718" width="20.844" y="953" x="376.73" fill="#9cc8cb"/>
-        <rect id="k-a4" ry="3.2103" height="98.718" width="20.844" y="953" x="397.62" fill="#9cc8cb"/>
+        <rect id="k-a5" ry="3.2103" height="98.718" width="20.844" y="953" x="397.62" fill="#9cc8cb"/>
         <rect id="k-d4" ry="3.2103" height="98.718" width="20.844" y="953" x="314.05" fill="#9cc8cb"/>
         <path id="k-c4-sharp" d="m308.88,953,0,2.1182,0,42.82,0,17.955c0,1.1712,0.9713,2.1183,2.1868,2.1183h6.4568c1.2155,0,2.1983-0.9471,2.1983-2.1183v-17.955-42.82-2.1182h-2.1983-6.4568-2.1868z" fill="#1c6c70"/>
         <path id="k-d4-sharp" d="m329.72,953,0,2.1182,0,42.82,0,17.955c0,1.1712,0.97129,2.1183,2.1868,2.1183h6.4568c1.2155,0,2.1983-0.9471,2.1983-2.1183v-17.955-42.82-2.1182h-2.1983-6.4568-2.1868z" fill="#1c6c70"/>
@@ -76,7 +76,7 @@
 
 import anime from 'animejs'
 
-const KEY_SEQUENCE = 'cdefgab'
+const KEY_SEQUENCE = 'abcdefg'
 const KEY_WIDTH = 20.9
 
 export default {
@@ -110,13 +110,14 @@ export default {
     // this.showKeys({c3: 'natural', e3: 'natural', g3: 'sharp'})
   },
   methods: {
-    showChord: function (ks) {
+    showChord: function (chord) {
       this.keys = [{pos: 0}, {pos: 0}, {pos: 0}, {pos: 0}]
       let keySeq = 0
+      let ks = chord.structure
       for (let k in ks) {
         let key = k.slice(0, 1)
         let octave = k.slice(1, 2)
-        let accent = ks[k]
+        let accent = ks[k].pitch
 
         let accentShift = 0
         switch (accent) {
@@ -129,25 +130,13 @@ export default {
             else accentShift = -0.5
             break
         }
-        let keyCount = (octave - 2) * 7 + accentShift + KEY_SEQUENCE.indexOf(key)
+        let keyCount = (octave - 2) * 7 + accentShift + KEY_SEQUENCE.indexOf(key) - 2
         let position = (keyCount + 0.5) * KEY_WIDTH
-        this.keys[keySeq] = {note: key.toUpperCase(), pos: position, pitch: accent, keyCount: keyCount}
+        this.keys[keySeq] = {note: key.toUpperCase(), pos: position, pitch: accent, keyCount: keyCount, finger: ks[k].finger}
         keySeq++
         let animateTarget = k + ((accent !== 'natural') ? '-' + accent : '')
         let fill = (keyCount === Math.round(keyCount)) ? '#ffffff' : '#000000'
         anime({ targets: '#k-' + animateTarget, fill: fill, easing: 'easeInOutCubic', delay: 0, duration: 1000 })
-      }
-      this.keys[0].finger = 1
-      if (keySeq === 3) {
-        if (Math.abs((this.keys[1].keyCount - this.keys[0].keyCount) - (this.keys[2].keyCount - this.keys[1].keyCount)) <= 1) this.keys[1].finger = 3
-        else if (this.keys[2].keyCount - this.keys[1].keyCount <= 1) this.keys[1].finger = 4
-        else this.keys[1].finger = 2
-        this.keys[2].finger = 5
-      } else {
-        this.keys[1].finger = 2
-        if (this.keys[3].keyCount - this.keys[2].keyCount <= 1) this.keys[2].finger = 4
-        else this.keys[2].finger = 3
-        this.keys[3].finger = 5
       }
     }
   }

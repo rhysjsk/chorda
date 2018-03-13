@@ -1,0 +1,37 @@
+<svg width="500" height="500" version="1.1" viewBox="0 0 132.29 132.29" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+     <g> 
+      <g id="fifth-text-outer" class="text-outer" :active="increments.fifth">
+       <rect x="0" y="0" width="125" height="125" rx="0" ry="0" fill-opacity="0.3"/>
+       <g id="fifth-text-inner" class="text-inner">
+        <g transform="translate(250 4)" fill="#00787d" font-family="sans-serif" letter-spacing="0px" stroke-width=".078107" word-spacing="0px">
+         <text x="62.8241" y="233.58005" font-size="8.1859px" style="line-height:1.25" xml:space="preserve"><tspan x="62.8241" y="233.58005" fill="#00787d" font-family="'Didact Gothic'" stroke-width=".078107">5</tspan></text>
+         <text x="66.747368" y="230.41623" font-size="4.887px" style="line-height:1.25" xml:space="preserve"><tspan x="66.747368" y="230.41623" fill="#00787d" font-family="'Didact Gothic'" stroke-width=".078107">th</tspan></text>
+        </g>
+       </g>
+      </g>
+      <g id="seventh-text-outer" class="text-outer" :active="increments.seventh">
+       <rect x="0" y="0" width="125" height="125" rx="0" ry="0" fill-opacity="0.03"/>
+       <g id="seventh-text-inner" class="text-inner">
+        <g transform="translate(125 4)" fill="#00787d" font-family="sans-serif" letter-spacing="0px" stroke-width=".078107" word-spacing="0px">
+         <text x="62.8241" y="233.58005" font-size="8.1859px" style="line-height:1.25" xml:space="preserve"><tspan x="62.8241" y="233.58005" fill="#00787d" font-family="'Didact Gothic'" stroke-width=".078107">7</tspan></text>
+         <text x="66.747368" y="230.41623" font-size="4.887px" style="line-height:1.25" xml:space="preserve"><tspan x="66.747368" y="230.41623" fill="#00787d" font-family="'Didact Gothic'" stroke-width=".078107">th</tspan></text>
+        </g>
+       </g>
+      </g>
+      <g id="third-text-outer" class="text-outer" :active="increments.third">
+       <rect x="0" y="0" width="125" height="125" rx="0" ry="0" fill-opacity="0.02" fill="#ff0000"/>
+       <g id="third-text-inner" class="text-inner" transform="translate(62.5 100)" fill="#00787d" font-family="sans-serif" letter-spacing="0px" stroke-width=".078107" word-spacing="0px">
+         <text x="0" y="0" font-size="8.1859px" style="line-height:1.25" xml:space="preserve"><tspan x="0" y="0" fill="#00787d" font-family="'Didact Gothic'" stroke-width=".078107">3</tspan></text>
+         <text x="0" y="0" font-size="4.887px" style="line-height:1.25" xml:space="preserve"><tspan x="0" y="0" fill="#00787d" font-family="'Didact Gothic'" stroke-width=".078107">rd</tspan></text>
+       </g>
+      </g>
+      <g id="root-text-outer" class="text-outer" :active="increments.root">
+       <rect x="0" y="0" width="125" height="125" rx="0" ry="0" fill-opacity="0"/>
+       <g id="root-text-inner" class="text-inner">
+        <g transform="translate(125 4)">
+         <text x="0" y="0" fill="#00787d" font-family="sans-serif" font-size="8.1859px" letter-spacing="0px" stroke-width=".078107" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan x="60.157009" y="232.78137" fill="#00787d" font-family="'Didact Gothic'" font-size="6.35px" stroke-width=".078107">root</tspan></text>
+        </g>
+       </g>
+      </g>
+     </g>
+    </svg>

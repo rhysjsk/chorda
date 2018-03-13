@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Anime logo animation | anime.js</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="apple-touch-icon-precomposed" href="./assets/img/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="./assets/img/icons/favicon.png">
+  <script src="./assets/js/anime.js"></script>
+</head>
+<body>
+  <div id="keyboard">
+  	<svg width="300" version="1.1" viewBox="0 0 132.29 132.29" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      
+  	    <g id="root-text-outer" class="text-outer" :active="increments.root">
+          <rect x="0" y="0" width="150" height="150" rx="0" ry="0" fill-opacity="0.5"/>
+          <g id="root-text-inner" class="text-inner" transform="translate(68.926 4.4894)">
+            <g>
+              <text x="60.157009" y="232.78137" fill="#00787d" font-family="sans-serif" font-size="8.1859px" letter-spacing="0px" stroke-width=".078107" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan x="0" y="0" fill="#00787d" font-family="'Didact Gothic'" font-size="6.35px" stroke-width=".078107">root</tspan></text>
+            </g>
+          </g>
+        </g>
+      
+    </svg>
+  </div>
+  <script>
+  	 anime({ targets: '#root-text-outer', rotate: 180, easing: 'easeInOutCubic', delay: 600, duration: 600 })
+  </script>
+  <style>
+  .text-outer {
+  	transform-origin:50% 50%;
+  }
+  #keyboard {
+  	background-color:red;
+  }
+  </style>
+</body>

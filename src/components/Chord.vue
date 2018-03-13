@@ -1,9 +1,9 @@
 <template>
   <div id="chord">
     <div id="chord-key">
-      C
+      {{chord.name}}
       <span id="chord-mode">
-        maj
+        {{chord.subtitle}}
       </span>
     </div>
   </div>
@@ -14,7 +14,18 @@ export default {
   name: 'Chord',
   data () {
     return {
-
+      chord: {name: '', subtitle: ''}
+    }
+  },
+  props: ['bus'],
+  created () {
+    // this.bus.$on('showChord', (args) => {
+    //   this.showChord(args.chord)
+    // })
+  },
+  methods: {
+    showChord: function (chord) {
+      this.chord = chord
     }
   }
 }

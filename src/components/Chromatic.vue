@@ -1,7 +1,7 @@
 <template>
   <div id="chromatic">
     <svg width="500" height="500" version="1.1" viewBox="0 0 132.29 132.29" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-     <g transform="translate(0 -164.71)">
+     <g>  
       <circle cx="66.146" cy="230.85" r="43.597" fill="none" stroke="#12a077" stroke-linecap="round" stroke-width=".758"/>
       <ellipse id="circle-0" :active="steps[0]" transform="matrix(.61973 .78482 -.78474 .61982 0 0)" cx="187.56" cy="64.089" rx="7.3303" ry="7.3301" fill="#c7eff1" stroke="#00b1b9" stroke-linecap="round" stroke-opacity=".70588" stroke-width=".758"/>
       <ellipse id="circle-1" :active="steps[1]" transform="matrix(.61973 .78482 -.78474 .61982 0 0)" cx="205.79" cy="50.499" rx="7.3303" ry="7.3301" fill="#c7eff1" stroke="#00b1b9" stroke-linecap="round" stroke-miterlimit="3.8" stroke-opacity=".70588" stroke-width=".758"/>
@@ -150,37 +150,35 @@
        <path d="m72.727 174.39a56.845 56.845 0 0 1 41.809 26.634 56.845 56.845 0 0 1 5.0095 49.318" fill="none" stroke="#12a077" stroke-linecap="round" stroke-width=".98835"/>
       </g>
       <g id="fifth-text-outer" class="text-outer" :active="increments.fifth">
-       <rect x="2.6458" y="167.35" width="127" height="127" rx="0" ry="0" fill-opacity="0"/>
+       <rect x="0" y="0" width="125" height="125" rx="0" ry="0" fill-opacity="0.3" fill="#ffcc00"/>
        <g id="fifth-text-inner" class="text-inner">
-        <g transform="translate(0 -56.337)" fill="#00787d" font-family="sans-serif" letter-spacing="0px" stroke-width=".078107" word-spacing="0px">
+        <g transform="translate(125 125)" fill="#00787d" font-family="sans-serif" letter-spacing="0px" stroke-width=".078107" word-spacing="0px">
          <text x="62.8241" y="233.58005" font-size="8.1859px" style="line-height:1.25" xml:space="preserve"><tspan x="62.8241" y="233.58005" fill="#00787d" font-family="'Didact Gothic'" stroke-width=".078107">5</tspan></text>
          <text x="66.747368" y="230.41623" font-size="4.887px" style="line-height:1.25" xml:space="preserve"><tspan x="66.747368" y="230.41623" fill="#00787d" font-family="'Didact Gothic'" stroke-width=".078107">th</tspan></text>
         </g>
        </g>
       </g>
       <g id="seventh-text-outer" class="text-outer" :active="increments.seventh">
-       <rect x="2.6458" y="167.35" width="127" height="127" rx="0" ry="0" fill-opacity="0"/>
+       <rect x="0" y="0" width="125" height="125" rx="0" ry="0" fill-opacity="0.2" fill="#00ff00"/>
        <g id="seventh-text-inner" class="text-inner">
-        <g transform="translate(0 -56.337)" fill="#00787d" font-family="sans-serif" letter-spacing="0px" stroke-width=".078107" word-spacing="0px">
-         <text x="62.8241" y="233.58005" font-size="8.1859px" style="line-height:1.25" xml:space="preserve"><tspan x="62.8241" y="233.58005" fill="#00787d" font-family="'Didact Gothic'" stroke-width=".078107">7</tspan></text>
-         <text x="66.747368" y="230.41623" font-size="4.887px" style="line-height:1.25" xml:space="preserve"><tspan x="66.747368" y="230.41623" fill="#00787d" font-family="'Didact Gothic'" stroke-width=".078107">th</tspan></text>
+        <g transform="translate(125 125)" fill="#00787d" font-family="sans-serif" letter-spacing="0px" stroke-width=".078107" word-spacing="0px">
+         <text x="0" y="0" font-size="8.1859px" style="line-height:1.25" xml:space="preserve"><tspan x="0" y="0" fill="#00787d" font-family="'Didact Gothic'" stroke-width=".078107">7</tspan></text>
+         <text x="0" y="0" font-size="4.887px" style="line-height:1.25" xml:space="preserve"><tspan x="0" y="0" fill="#00787d" font-family="'Didact Gothic'" stroke-width=".078107">th</tspan></text>
         </g>
        </g>
       </g>
       <g id="third-text-outer" class="text-outer" :active="increments.third">
-       <rect x="2.6458" y="167.35" width="127" height="127" rx="0" ry="0" fill-opacity="0"/>
-       <g id="third-text-inner" class="text-inner">
-        <g transform="translate(0 -56.337)" fill="#00787d" font-family="sans-serif" letter-spacing="0px" stroke-width=".078107" word-spacing="0px">
-         <text x="62.8241" y="233.58005" font-size="8.1859px" style="line-height:1.25" xml:space="preserve"><tspan x="62.8241" y="233.58005" fill="#00787d" font-family="'Didact Gothic'" stroke-width=".078107">3</tspan></text>
-         <text x="66.747368" y="230.41623" font-size="4.887px" style="line-height:1.25" xml:space="preserve"><tspan x="66.747368" y="230.41623" fill="#00787d" font-family="'Didact Gothic'" stroke-width=".078107">rd</tspan></text>
-        </g>
+       <rect x="0" y="0" width="125" height="125" rx="0" ry="0" fill-opacity="0.1" fill="#ff0000"/>
+       <g id="third-text-inner" class="text-inner" transform="translate(62.5 100)" fill="#00787d" font-family="sans-serif" letter-spacing="0px" stroke-width=".078107" word-spacing="0px">
+         <text x="0" y="0" font-size="8.1859px" style="line-height:1.25" xml:space="preserve"><tspan x="0" y="0" fill="#00787d" font-family="'Didact Gothic'" stroke-width=".078107">3</tspan></text>
+         <text x="0" y="0" font-size="4.887px" style="line-height:1.25" xml:space="preserve"><tspan x="0" y="0" fill="#00787d" font-family="'Didact Gothic'" stroke-width=".078107">rd</tspan></text>
        </g>
       </g>
       <g id="root-text-outer" class="text-outer" :active="increments.root">
-       <rect x="2.6458" y="167.35" width="127" height="127" rx="0" ry="0" fill-opacity="0"/>
+       <rect x="0" y="0" width="125" height="125" rx="0" ry="0" fill-opacity="0"/>
        <g id="root-text-inner" class="text-inner">
-        <g transform="translate(0 -56.337)">
-         <text x="60.157009" y="232.78137" fill="#00787d" font-family="sans-serif" font-size="8.1859px" letter-spacing="0px" stroke-width=".078107" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan x="60.157009" y="232.78137" fill="#00787d" font-family="'Didact Gothic'" font-size="6.35px" stroke-width=".078107">root</tspan></text>
+        <g transform="translate(125 4)">
+         <text x="0" y="0" fill="#00787d" font-family="sans-serif" font-size="8.1859px" letter-spacing="0px" stroke-width=".078107" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan x="60.157009" y="232.78137" fill="#00787d" font-family="'Didact Gothic'" font-size="6.35px" stroke-width=".078107">root</tspan></text>
         </g>
        </g>
       </g>
@@ -227,13 +225,13 @@ export default {
   },
   // {c3: 'natural', e3: 'natural', g3: 'natural', a4:'flat'}
   methods: {
-    showChord: function (keys) {
-      console.log('KEYS:', keys)
+    showChord: function (ch) {
+      let keys = ch.structure
       let c = 0
       let chord = {}
       for (let k in keys) {
         let key = k.slice(0, 1)
-        let accent = keys[k]
+        let accent = keys[k].pitch
         let accentShift = 0
         switch (accent) {
           case 'sharp':
@@ -246,7 +244,7 @@ export default {
             break
         }
         let keyCount = KEY_SEQUENCE.indexOf(key) + accentShift
-        console.log('KEY:', (key + ((false) ? accent : '')))
+        console.log('KEY:', keyCount)
         chord[KEY_INCREMENTS[c++]] = key + ((accent !== 'natural') ? accent : '')
       }
       console.log('CHORD:', chord)
@@ -268,11 +266,14 @@ export default {
           this.notes[keyStep[j]] = 'off'
           for (let key in chord) {
             if (chord[key] === keyStep[j]) {
+              console.log('Is equal:', key, ': ', chord[key])
               this.notes[keyStep[j]] = 'active'
               this.steps[i] = 'active'
               let diffKeyStep = i - oldKeyStep
               if (oldKeyStep !== null && diffKeyStep > 0) {
+                console.log('old step', oldKeyStep, diffKeyStep)
                 let arc = diffKeyStep + '-' + availableArcs[diffKeyStep]++
+                console.log('arc:', arc)
                 anime({ targets: '#circle-arc-' + arc, rotate: oldKeyStep * STEP_ANG, easing: 'easeInOutCubic', delay: delay, duration: duration })
                 anime({
                   targets: '#circle-arc-' + arc + ' path',
@@ -282,10 +283,13 @@ export default {
                   duration: duration,
                   delay: delay * 2
                 })
+                console.log('set animations')
               }
+
               oldKeyStep = i
               this.increments[key] = 'active'
-              let rotateAng = i * STEP_ANG
+              let rotateAng = i * STEP_ANG * 0.1
+              console.log('KEY:', key, '   :', rotateAng, delay, duration)
               anime({ targets: '#' + key + '-text-outer', rotate: rotateAng, easing: 'easeInOutCubic', delay: delay, duration: duration })
               anime({ targets: '#' + key + '-text-inner', rotate: -rotateAng, easing: 'easeInOutCubic', delay: delay, duration: duration })
             }
@@ -315,7 +319,10 @@ a {
 }
 .text-outer, .text-inner, .circle-arc{
   transform-origin:50% 50%;
-}
+} 
+/* #fifth-text-outer {
+  transform-origin:70px 235px;
+} */
 .circle-arc path {
   opacity: 0;
 }
@@ -329,10 +336,10 @@ a {
   100% {opacity: 1;}
 }
 .text-outer[active="active"] {
-  transition: opacity 0.25s ease-out;
+  opacity:1;
 }
 #chromatic {
-  width:500px;
+/*  width:500px;*/
 }
 
 </style>
