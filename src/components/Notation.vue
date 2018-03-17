@@ -148,15 +148,19 @@ export default {
   },
   methods: {
     showChord: function (chord) {
+      for (let i = 0; i < KEYS.length; i++) {
+        this.notes[KEYS[i]] = {noteright: false, noteleft: false, sharp: false, flat: false}
+      }
       let notes = chord.structure
       let i = null
       for (i in notes) {
+        console.log('this.HAS EARLIER', notes[i].pitch)
         if (this.hasEarlier(i)) {
           this.notes[i].noteright = true
         } else {
           this.notes[i].noteleft = true
         }
-        this.notes[i][notes[i]] = true
+        this.notes[i][notes[i].pitch] = true
       }
     },
     hasEarlier: function (note) {

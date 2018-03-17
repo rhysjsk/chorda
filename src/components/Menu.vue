@@ -110,22 +110,24 @@ export default {
     }
   },
   mounted () {
-
+    this.onStyleSelect('beginner')
   },
   methods: {
     onModeSelect: function (option, event) {
       Vue.set(this.settings.modes, option, !this.settings.modes[option])
-      this.$store.commit('increment')
-      console.log('STORE:', this.$store.state.count)
+      this.$emit('settings', this.settings)
     },
     onPeriodSelect: function (option, event) {
       Vue.set(this.settings.periods, option, !this.settings.periods[option])
+      this.$emit('settings', this.settings)
     },
     onChordSelect: function (option, event) {
       Vue.set(this.settings.chords, option, !this.settings.chords[option])
+      this.$emit('settings', this.settings)
     },
     onKeySelect: function (option, event) {
       Vue.set(this.settings.keys, option, !this.settings.keys[option])
+      this.$emit('settings', this.settings)
     },
     onStyleSelect: function (option, event) {
       for (let k in this.settings.styles) {
@@ -157,6 +159,7 @@ export default {
       for (let i = 0; i < selectedStyle.periods.length; i++) {
         this.settings.periods[selectedStyle.periods[i]] = true
       }
+      this.$emit('settings', this.settings)
     },
     capitaliseText: function (string) {
       return string.charAt(0).toUpperCase() + string.slice(1)

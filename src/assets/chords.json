@@ -1,0 +1,65 @@
+{
+  "c":{
+    "major": {
+  	  "triads": {
+  	  	"inversion0": {
+  	  	  "id": "cmaj",
+  	  	  "name": "C",
+  	  	  "subtitle": "maj",
+  	  	  "desc": {"title":"The classic C Major", "body":"This is the most common, and basic, chord, the root triad in the C major scale."},
+  	  	  "structure": {"c3": {"pitch": "natural", "finger":"1"}, "e3": {"pitch": "natural", "finger": "3"}, "g3": {"pitch": "natural", "finger": "5"}}
+  	    }
+      }
+    },
+    "minor": {
+      "triads": {
+      	"inversion0": {
+      	  "id": "cmin",
+  	  	  "name": "C",
+  	  	  "subtitle": "min",
+  	  	  "desc": {"title":"C minor", "body":"This is often the introduction to the minor chord. Listen to its melancholy sound that feels unresolved."},
+  	  	  "structure": {"c3": {"pitch": "natural", "finger": "1"}, "e3": {"pitch": "flat", "finger": "3"}, "g3": {"pitch": "natural", "finger": "5"}}		
+      	}
+      }
+    }
+  }, 
+  "f": {
+  	"minor": {
+  	  "triads": {
+  	    "inversion0": {
+  	      "id": "fmajinv1",
+  	      "name": "F",
+  	      "subtitle": "min",
+  	      "desc": {"title": "F major", "body":"This is the F major chord that everyone uses, but it's actually the 1st inversion, as you can see in the Chromatic diagram."},
+  	      "structure": {"c3": {"pitch": "natural", "finger": "1"}, "f3": {"pitch": "natural", "finger": "3"}, "g3": {"pitch": "natural", "finger": "5"}}
+  	    }
+  	  }
+  	},
+    "major": {
+      "triads": {
+        "inversion0": {
+          "id": "fmajinv1",
+          "name": "F",
+          "subtitle": "maj",
+          "desc": {"title": "F major", "body": "This is the F major chord that everyone uses, but it's actually the 1st inversion, as you can see in the Chromatic diagram."},
+          "structure": {"f3": {"pitch": "natural", "finger": "3"}, "a4": {"pitch": "natural", "finger": "5"}, "c3": {"pitch": "natural", "finger": "1"}}
+        }
+      }
+    }
+  }, 
+  "d": {
+  	"major": {
+  	  "tetrads": {
+  	  	"sus": {
+  	  	  "inversion0": {
+  	  	  	"id": "d7sus",
+  	  	  	"title": "D7",
+  	  	  	"subtitle": "sus",
+  	  	  	"desc": {"title": "D 7 suspended", "body": "Probably the most universal of the 7th chords, the D7 has two characteristics: It's missing its perfect 5th, giving it the 'suspended' term, and it has a augmented 7th."},
+  	  	  	"structure": {}
+  	  	  }
+  	  	}
+  	  }
+  	}
+  }
+}

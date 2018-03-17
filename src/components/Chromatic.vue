@@ -11,7 +11,6 @@
    height="300"
    viewBox="0 0 500 500"
    id="svg2">
-  
   <g id="circle-arc-4-1" class="circle-arc">
     <rect width="500" height="500" x="0" y="0" style="fill-opacity:0;" />
     <path d="M 282.35517,27.054332 A 225.28122,225.28122 0 0 1 459.37256,333.15503" style="fill:none;stroke:#12a077;stroke-width:4;stroke-linecap:round;" />
@@ -44,55 +43,54 @@
     <rect width="500" height="500" x="0" y="0" style="fill-opacity:0;" />
     <path d="M 282.35517,27.054332 A 225.28122,225.28122 0 0 1 473.84921,224.63938" style="fill:none;stroke:#12a077;stroke-width:4;stroke-linecap:round;" />
   </g>
-  <g id="step-0" class="text-outer" active="active">
+  <g id="step-0" class="step">
     <rect width="500" height="500" x="0" y="0" style="fill-opacity:0;" />
     <path d="m 257.87165,24.718781 a 7.8716516,7.8716516 0 1 1 -15.7433,0 7.8716516,7.8716516 0 1 1 15.7433,0 z" style="fill:#12a077;" />
   </g>
-  <g id="step-1" class="text-outer" active="active">
+  <g id="step-1" class="step">
     <rect width="500" height="500" x="0" y="0" style="fill-opacity:0;" />
     <path d="m 257.87165,24.718781 a 7.8716516,7.8716516 0 1 1 -15.7433,0 7.8716516,7.8716516 0 1 1 15.7433,0 z" style="fill:#12a077;" />
   </g>
-  <g id="step-2" class="text-outer" active="active">
+  <g id="step-2" class="step">
     <rect width="500" height="500" x="0" y="0" style="fill-opacity:0;" />
     <path d="m 257.87165,24.718781 a 7.8716516,7.8716516 0 1 1 -15.7433,0 7.8716516,7.8716516 0 1 1 15.7433,0 z" style="fill:#12a077;" />
   </g>
-  <g id="step-3" class="text-outer" active="active">
+  <g id="step-3" class="step">
     <rect width="500" height="500" x="0" y="0" style="fill-opacity:0;" />
     <path d="m 257.87165,24.718781 a 7.8716516,7.8716516 0 1 1 -15.7433,0 7.8716516,7.8716516 0 1 1 15.7433,0 z" style="fill:#12a077;" />
   </g>
-  <g id="step-4" class="text-outer" active="active">
+  <g id="step-4" class="step">
     <rect width="500" height="500" x="0" y="0" style="fill-opacity:0;" />
     <path d="m 257.87165,24.718781 a 7.8716516,7.8716516 0 1 1 -15.7433,0 7.8716516,7.8716516 0 1 1 15.7433,0 z" style="fill:#12a077;" />
   </g>
-  <g id="step-5" class="text-outer" active="active">
+  <g id="step-5" class="step">
     <rect width="500" height="500" x="0" y="0" style="fill-opacity:0;" />
     <path d="m 257.87165,24.718781 a 7.8716516,7.8716516 0 1 1 -15.7433,0 7.8716516,7.8716516 0 1 1 15.7433,0 z" style="fill:#12a077;" />
   </g>
-  <g id="step-6" class="text-outer" active="active">
+  <g id="step-6" class="step">
     <rect width="500" height="500" x="0" y="0" style="fill-opacity:0;" />
     <path d="m 257.87165,24.718781 a 7.8716516,7.8716516 0 1 1 -15.7433,0 7.8716516,7.8716516 0 1 1 15.7433,0 z" style="fill:#12a077;" />
   </g>
-  <g id="step-7" class="text-outer" active="active">
+  <g id="step-7" class="step">
     <rect width="500" height="500" x="0" y="0" style="fill-opacity:0;" />
     <path d="m 257.87165,24.718781 a 7.8716516,7.8716516 0 1 1 -15.7433,0 7.8716516,7.8716516 0 1 1 15.7433,0 z" style="fill:#12a077;" />
   </g>
-  <g id="step-8" class="text-outer" active="active">
+  <g id="step-8" class="step">
     <rect width="500" height="500" x="0" y="0" style="fill-opacity:0;" />
     <path d="m 257.87165,24.718781 a 7.8716516,7.8716516 0 1 1 -15.7433,0 7.8716516,7.8716516 0 1 1 15.7433,0 z" style="fill:#12a077;" />
   </g>
-  <g id="step-9" class="text-outer" active="active">
+  <g id="step-9" class="step">
     <rect width="500" height="500" x="0" y="0" style="fill-opacity:0;" />
     <path d="m 257.87165,24.718781 a 7.8716516,7.8716516 0 1 1 -15.7433,0 7.8716516,7.8716516 0 1 1 15.7433,0 z" style="fill:#12a077;" />
   </g>
-  <g id="step-10" class="text-outer" active="active">
+  <g id="step-10" class="step">
     <rect width="500" height="500" x="0" y="0" style="fill-opacity:0;" />
     <path d="m 257.87165,24.718781 a 7.8716516,7.8716516 0 1 1 -15.7433,0 7.8716516,7.8716516 0 1 1 15.7433,0 z" style="fill:#12a077;" />
   </g>
-  <g id="step-11" class="text-outer" active="active">
+  <g id="step-11" class="step">
     <rect width="500" height="500" x="0" y="0" style="fill-opacity:0;" />
     <path d="m 257.87165,24.718781 a 7.8716516,7.8716516 0 1 1 -15.7433,0 7.8716516,7.8716516 0 1 1 15.7433,0 z" style="fill:#12a077;" />
   </g>
-  
   <g
      transform="matrix(3.8991529,-0.56538647,0.56538647,3.8991529,-667.37615,19.492233)"
      >
@@ -353,7 +351,7 @@
     <rect width="500" height="500" x="0" y="0" style="fill-opacity:0;" />
     <path d="M 254.67829,106.74676 380.51933,311.98749" style="stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;" />
   </g>
-  <g id="join-4-2" class="join-stroke">
+  <g id="join-4-2" class="join-stroke" active="inactive">
     <rect width="500" height="500" x="0" y="0" style="fill-opacity:0;" />
     <path d="M 254.67829,106.74676 380.51933,311.98749" style="stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;" />
   </g>
@@ -365,7 +363,7 @@
 
 import anime from 'animejs'
 
-const KEY_SEQUENCE = 'cdefgab'
+// const KEY_SEQUENCE = 'cdefgab'
 const KEY_INCREMENTS = ['root', 'third', 'fifth', 'seventh']
 const KEY_STEPS = [['bsharp', 'c'], ['dflat', 'csharp'], ['d'], ['eflat', 'dsharp'], ['fflat', 'e'], ['esharp', 'f'], ['gflat', 'fsharp'], ['g'], ['aflat', 'gsharp'], ['a'], ['bflat', 'asharp'], ['cflat', 'b']]
 const STEP_ANG = 30
@@ -373,9 +371,6 @@ const K_STEP_ANG = 5
 
 export default {
   name: 'Chromatic',
-  mounted () {
-    // setTimeout(this.setKeys, 100, {root: 'c', third: 'eflat', fifth: 'g'})
-  },
   props: ['bus'],
   updated () {
     let duration = 500
@@ -398,7 +393,7 @@ export default {
       increments: {root: 'off'}
     }
   },
-  // {c3: 'natural', e3: 'natural', g3: 'natural', a4:'flat'}
+
   methods: {
     showChord: function (ch) {
       let keys = ch.structure
@@ -407,8 +402,8 @@ export default {
       for (let k in keys) {
         let key = k.slice(0, 1)
         let accent = keys[k].pitch
-        let accentShift = 0
-        switch (accent) {
+        /* let accentShift = 0
+         switch (accent) {
           case 'sharp':
             if (key === 'e' || key === 'b') accentShift = 1
             else accentShift = 0.5
@@ -417,75 +412,87 @@ export default {
             if (key === 'f' || key === 'c') accentShift = -1
             else accentShift = -0.5
             break
-        }
-        let keyCount = KEY_SEQUENCE.indexOf(key) + accentShift
-        console.log('KEY:', keyCount)
+        } */
+        // let keyCount = KEY_SEQUENCE.indexOf(key) + accentShift
         chord[KEY_INCREMENTS[c++]] = key + ((accent !== 'natural') ? accent : '')
       }
-      console.log('CHORD:', chord)
-      let duration = 5000
-      let delay = 500
+      let duration = 1000
+      let delay = 0
       let oldKeyStep = null
       let stepNum = 0
 
       let availableArcs = []
       for (let i = 1; i <= 5; i++) { availableArcs.push(1) }
-
       for (let i = 0; i < KEY_INCREMENTS.length; i++) {
         this.increments[KEY_INCREMENTS[i]] = 'off'
       }
-      for (let i = 0; i < KEY_STEPS.length; i++) {
-        let keyStep = KEY_STEPS[i]
+      let currKey = {}
+      let dChord = {}
+      for (let key in chord) {
+        dChord[key] = chord[key]
+      }
+      for (let key in dChord) {
+        currKey = {key: dChord[key], chord: key}
+        delete dChord[key]
+        break
+      }
+      let i = 0
+      while (true) {
+        let i2 = i % 12
+        let keyStep = KEY_STEPS[i2]
         let j = null
-        this.steps[i] = 'inactive'
+        this.steps[i2] = 'inactive'
         for (j = 0; j < keyStep.length; j++) {
           this.notes[keyStep[j]] = 'off'
-          for (let key in chord) {
-            if (chord[key] === keyStep[j]) {
-              console.log('Is equal:', key, ': ', chord[key])
-              this.notes[keyStep[j]] = 'active'
-              this.steps[i] = 'active'
-              let diffKeyStep = i - oldKeyStep
-              if (oldKeyStep !== null && diffKeyStep > 0) {
-                console.log('old step', oldKeyStep, diffKeyStep)
-                let arc = diffKeyStep + '-' + availableArcs[diffKeyStep]++
-                console.log('arc:', arc)
-                let totalSteps = diffKeyStep
-                for (let k = 0; k < totalSteps; k++) {
-                  let rotatePart = i * STEP_ANG - diffKeyStep * STEP_ANG * 0.5 - diffKeyStep * K_STEP_ANG * 0.5 + k * K_STEP_ANG
-                  anime({ targets: '#step-' + (k + stepNum), rotate: rotatePart, easing: 'easeInOutCubic', delay: delay, duration: duration })
-                }
-                stepNum += totalSteps
-
-                anime({ targets: '#circle-arc-' + arc, rotate: oldKeyStep * STEP_ANG, easing: 'easeInOutCubic', delay: delay, duration: duration })
-                anime({ targets: '#join-' + arc, rotate: oldKeyStep * STEP_ANG, easing: 'easeInOutCubic', delay: delay, duration: duration })
-                anime({
-                  targets: '#circle-arc-' + arc + ' path',
-                  strokeDashoffset: [anime.setDashoffset, 0],
-                  opacity: 1,
-                  easing: 'easeInOutCubic',
-                  duration: duration,
-                  delay: delay * 2
-                })
-                console.log('set animations')
+          if (currKey.key === keyStep[j]) {
+            this.notes[keyStep[j]] = 'active'
+            this.steps[i2] = 'active'
+            let diffKeyStep = i - oldKeyStep
+            if (oldKeyStep !== null && diffKeyStep > 0) {
+              let arc = diffKeyStep + '-' + availableArcs[diffKeyStep]++
+              let totalSteps = diffKeyStep
+              for (let k = 0; k < totalSteps; k++) {
+                let rotatePart = i * STEP_ANG - diffKeyStep * STEP_ANG * 0.5 - diffKeyStep * K_STEP_ANG * 0.5 + k * K_STEP_ANG
+                anime({ targets: '#step-' + (k + stepNum), opacity: 1, rotate: rotatePart, easing: 'easeInOutCubic', delay: delay, duration: duration })
               }
-
-              oldKeyStep = i
-              this.increments[key] = 'active'
-              let rotateAng = i * STEP_ANG
-              console.log('KEY:', key, '   :', rotateAng, delay, duration)
-              anime({ targets: '#' + key + '-text-outer', rotate: rotateAng, easing: 'easeInOutCubic', delay: delay, duration: duration })
-              anime({ targets: '#' + key + '-text-inner', rotate: -rotateAng, easing: 'easeInOutCubic', delay: delay, duration: duration })
+              stepNum += totalSteps
+              anime({ targets: '#circle-arc-' + arc, rotate: oldKeyStep * STEP_ANG, easing: 'easeInOutCubic', delay: delay, duration: duration })
+              anime({ targets: '#join-' + arc, rotate: [{value: oldKeyStep * STEP_ANG}, {value: oldKeyStep * STEP_ANG}], opacity: [{value: 0}, {value: 1}], easing: 'easeInOutCubic', delay: delay, duration: duration })
+              anime({
+                targets: '#circle-arc-' + arc + ' path',
+                strokeDashoffset: [anime.setDashoffset, 0],
+                opacity: 1,
+                easing: 'easeInOutCubic',
+                duration: duration,
+                delay: delay * 2
+              })
+            }
+            oldKeyStep = i
+            this.increments[currKey.chord] = 'active'
+            let rotateAng = i * STEP_ANG
+            anime({ targets: '#' + currKey.chord + '-text-outer', rotate: rotateAng, easing: 'easeInOutCubic', delay: delay, duration: duration })
+            anime({ targets: '#' + currKey.chord + '-text-inner', rotate: -rotateAng, easing: 'easeInOutCubic', delay: delay, duration: duration })
+            if (Object.keys(dChord).length === 0) {
+              currKey = null
+              break
+            }
+            for (let key in dChord) {
+              currKey = {key: dChord[key], chord: key}
+              delete dChord[key]
+              break
             }
           }
-          if (this.steps[i] !== 'active') this.notes[keyStep[j]] = (j === (keyStep.length - 1)) ? 'inactive' : 'off'
         }
+        if (this.steps[i] !== 'active') {
+          this.notes[keyStep[j]] = (j === (keyStep.length - 1)) ? 'inactive' : 'off'
+        }
+        i++
+        if (Object.keys(dChord).length === 0 && currKey === null) break
       }
     }
   }
 }
 </script>
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 h1, h2 {
   font-weight: normal;
@@ -503,7 +510,7 @@ a {
 }
 .text-outer, .text-inner, .circle-arc, .join-stroke {
   transform-origin:50% 50%;
-} 
+}
 /* #fifth-text-outer {
   transform-origin:70px 235px;
 } */
@@ -512,6 +519,10 @@ a {
 }
 [active="off"] {
   opacity: 0;
+}
+.step, .join-stroke {
+  opacity: 0;
+  transform-origin:50% 50%;
 }
 .text-outer {
   opacity:0;

@@ -19,13 +19,14 @@ export default {
   },
   props: ['bus'],
   created () {
-    // this.bus.$on('showChord', (args) => {
-    //   this.showChord(args.chord)
-    // })
+    this.bus.$on('showChord', (args) => {
+      this.showChord(args.chord)
+    })
   },
   methods: {
     showChord: function (chord) {
       this.chord = chord
+      // Vue.set(this, 'chord', chord)
     }
   }
 }

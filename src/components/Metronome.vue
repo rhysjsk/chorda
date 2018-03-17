@@ -50,7 +50,10 @@ export default {
     },
     tick: function () {
       this.tickCount++
-      if (this.tickCount >= 4) this.tickCount = 0
+      if (this.tickCount >= 4) {
+        this.$emit('tick', 'whole')
+        this.tickCount = 0
+      }
       if (this.audioState === 'on') this.tickSound.play()
     },
     setBPM: function (num) {
