@@ -61,7 +61,7 @@
           <text class="accidental sharp" font-family="Tahoma" font-size="10px" x="6.5">♯</text>
           <text font-family="Didact Gothic" font-size="12px" y="-117">{{keys[2].finger}}</text>
       </g>
-      <g id="key-3" :transform="translateKey3" fill="#000000" pitch="keys[3].pitch">
+      <g id="key-3" :transform="translateKey3" font-weight="bold" fill="#000000" :pitch="keys[3].pitch">
           <text class="accidental accented-note" font-family="Didact Gothic" font-size="12px">{{keys[3].note}}</text>
           <text class="accidental natural-note" font-family="Didact Gothic" font-size="14px" x="-4">{{keys[3].note}}</text>
           <text class="accidental flat" font-family="Tahoma" font-size="10px" x="6.5">♭</text>

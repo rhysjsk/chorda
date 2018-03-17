@@ -1,5 +1,6 @@
-<template>
-  <div id="chromatic">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
@@ -7,10 +8,24 @@
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
    version="1.1"
-   width="300"
-   height="300"
+   width="500"
+   height="500"
    viewBox="0 0 500 500"
    id="svg2">
+  <metadata
+     id="metadata269">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs267" />
   
   <g id="circle-arc-4-1" class="circle-arc">
     <rect width="500" height="500" x="0" y="0" style="fill-opacity:0;" />
@@ -37,10 +52,6 @@
     <path d="M 282.35517,27.054332 A 225.28122,225.28122 0 0 1 430.23403,114.84334" style="fill:none;stroke:#12a077;stroke-width:4;stroke-linecap:round;" />
   </g>
   <g id="circle-arc-3-1" class="circle-arc">
-    <rect width="500" height="500" x="0" y="0" style="fill-opacity:0;" />
-    <path d="M 282.35517,27.054332 A 225.28122,225.28122 0 0 1 473.84921,224.63938" style="fill:none;stroke:#12a077;stroke-width:4;stroke-linecap:round;" />
-  </g>
-  <g id="circle-arc-3-2" class="circle-arc">
     <rect width="500" height="500" x="0" y="0" style="fill-opacity:0;" />
     <path d="M 282.35517,27.054332 A 225.28122,225.28122 0 0 1 473.84921,224.63938" style="fill:none;stroke:#12a077;stroke-width:4;stroke-linecap:round;" />
   </g>
@@ -112,7 +123,9 @@
       <ellipse id="circle-11" :active="steps[11]" cx="205.78999" cy="50.499001" rx="7.3302999" ry="7.3301001" />
     </g>
   </g>
-  <g transform="matrix(3.9413432,0,0,3.9413432,-9.814784,-659.9711)" >
+  <g
+     transform="matrix(3.9413432,0,0,3.9413432,-9.814784,-659.9711)"
+     id="g3939">
     <g id="text-step-0" class="text-step">
       <g id="text-c" class="key-text key-sharp" :active="notes.c" style="fill-opacity:1">
         <path
@@ -295,7 +308,7 @@
   </g>
   <g id="root-text-outer" class="text-outer" :active="increments.root">
     <rect width="500" height="500" x="0" y="0" style="fill:#12a077;fill-opacity:0.0;" />
-    <g transform="translate(250 28)">
+    <g transform="translate(250 32)">
       <g id="root-text-inner">
         <text x="0" y="0" xml:space="preserve" style="font-size:20px;font-family:Didact Gothic;text-align:center;text-anchor:middle;fill:#000000;">root</text>
       </g>
@@ -303,7 +316,7 @@
   </g>
   <g id="third-text-outer" class="text-outer" :active="increments.third">
     <rect width="500" height="500" x="0" y="0" style="fill:#12a077;fill-opacity:0.0;" />
-    <g transform="translate(250 28)">
+    <g transform="translate(250 32)">
       <g id="third-text-inner">
         <text x="0" y="0" xml:space="preserve" style="font-size:20px;font-family:Didact Gothic;text-align:center;text-anchor:middle;fill:#000000;">3rd</text>
       </g>
@@ -311,7 +324,7 @@
   </g>
   <g id="fifth-text-outer" class="text-outer" :active="increments.fifth">
     <rect width="500" height="500" x="0" y="0" style="fill:#12a077;fill-opacity:0.0;" />
-    <g transform="translate(250 28)">
+    <g transform="translate(250 32)">
       <g id="fifth-text-inner">
         <text x="0" y="0" xml:space="preserve" style="font-size:20px;font-family:Didact Gothic;text-align:center;text-anchor:middle;fill:#000000;">5th</text>
       </g>
@@ -319,211 +332,10 @@
   </g>
   <g id="seventh-text-outer" class="text-outer" :active="increments.seventh">
     <rect width="500" height="500" x="0" y="0" style="fill:#12a077;fill-opacity:0.0;" />
-    <g transform="translate(250 28)">
+    <g transform="translate(250 32)">
       <g id="seventh-text-inner">
         <text x="0" y="0" xml:space="preserve" style="font-size:20px;font-family:Didact Gothic;text-align:center;text-anchor:middle;fill:#000000;">7th</text>
       </g>
     </g>
   </g>
-  <g id="join-1-1" class="join-stroke">
-    <rect width="500" height="500" x="0" y="0" style="fill-opacity:0;" />
-    <path d="m 256.1764,105.9977 57.67714,12.73392" style="stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;" />
-  </g>
-  <g id="join-1-2" class="join-stroke">
-    <rect width="500" height="500" x="0" y="0" style="fill-opacity:0;" />
-    <path d="m 256.1764,105.9977 57.67714,12.73392" style="stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;" />
-  </g>
-  <g id="join-2-1" class="join-stroke">
-    <rect width="500" height="500" x="0" y="0" style="fill-opacity:0;" />
-    <path d="m 256.92545,105.9977 111.60902,62.92052" style="stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;" />
-  </g>
-  <g id="join-2-2" class="join-stroke">
-    <rect width="500" height="500" x="0" y="0" style="fill-opacity:0;" />
-    <path d="m 256.92545,105.9977 111.60902,62.92052" style="stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;" />
-  </g>
-  <g id="join-3-1" class="join-stroke">
-    <rect width="500" height="500" x="0" y="0" style="fill-opacity:0;" />
-    <path d="M 256.92545,105.9977 393.25324,240.82738" style="stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;" />
-  </g>
-  <g id="join-3-2" class="join-stroke">
-    <rect width="500" height="500" x="0" y="0" style="fill-opacity:0;" />
-    <path d="M 256.92545,105.9977 393.25324,240.82738" style="stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;" />
-  </g>
-  <g id="join-4-1" class="join-stroke">
-    <rect width="500" height="500" x="0" y="0" style="fill-opacity:0;" />
-    <path d="M 254.67829,106.74676 380.51933,311.98749" style="stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;" />
-  </g>
-  <g id="join-4-2" class="join-stroke">
-    <rect width="500" height="500" x="0" y="0" style="fill-opacity:0;" />
-    <path d="M 254.67829,106.74676 380.51933,311.98749" style="stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;" />
-  </g>
 </svg>
-  </div>
-</template>
-
-<script>
-
-import anime from 'animejs'
-
-const KEY_SEQUENCE = 'cdefgab'
-const KEY_INCREMENTS = ['root', 'third', 'fifth', 'seventh']
-const KEY_STEPS = [['bsharp', 'c'], ['dflat', 'csharp'], ['d'], ['eflat', 'dsharp'], ['fflat', 'e'], ['esharp', 'f'], ['gflat', 'fsharp'], ['g'], ['aflat', 'gsharp'], ['a'], ['bflat', 'asharp'], ['cflat', 'b']]
-const STEP_ANG = 30
-const K_STEP_ANG = 5
-
-export default {
-  name: 'Chromatic',
-  mounted () {
-    // setTimeout(this.setKeys, 100, {root: 'c', third: 'eflat', fifth: 'g'})
-  },
-  props: ['bus'],
-  updated () {
-    let duration = 500
-    let delay = 500
-    anime({ targets: '.key-text[active="active"]', opacity: 1, easing: 'easeInOutCubic', delay: delay, duration: duration })
-    anime({ targets: '.key-text[active="inactive"]', opacity: 0.32, easing: 'easeInOutCubic', delay: delay, duration: duration })
-    anime({ targets: '.key-text[active="off"]', opacity: 0, easing: 'easeInOutCubic', delay: delay, duration: duration })
-    anime({ targets: 'ellipse[active="active"]', fill: '#ffffff', easing: 'easeInOutCubic', delay: delay, duration: duration })
-    anime({ targets: 'ellipse[active="inactive"]', fill: '#c7eff1', easing: 'easeInOutCubic', delay: delay, duration: duration })
-  },
-  created () {
-    this.bus.$on('showChord', (args) => {
-      this.showChord(args.chord)
-    })
-  },
-  data () {
-    return {
-      steps: [],
-      notes: {c: 'off'},
-      increments: {root: 'off'}
-    }
-  },
-  // {c3: 'natural', e3: 'natural', g3: 'natural', a4:'flat'}
-  methods: {
-    showChord: function (ch) {
-      let keys = ch.structure
-      let c = 0
-      let chord = {}
-      for (let k in keys) {
-        let key = k.slice(0, 1)
-        let accent = keys[k].pitch
-        let accentShift = 0
-        switch (accent) {
-          case 'sharp':
-            if (key === 'e' || key === 'b') accentShift = 1
-            else accentShift = 0.5
-            break
-          case 'flat':
-            if (key === 'f' || key === 'c') accentShift = -1
-            else accentShift = -0.5
-            break
-        }
-        let keyCount = KEY_SEQUENCE.indexOf(key) + accentShift
-        console.log('KEY:', keyCount)
-        chord[KEY_INCREMENTS[c++]] = key + ((accent !== 'natural') ? accent : '')
-      }
-      console.log('CHORD:', chord)
-      let duration = 5000
-      let delay = 500
-      let oldKeyStep = null
-      let stepNum = 0
-
-      let availableArcs = []
-      for (let i = 1; i <= 5; i++) { availableArcs.push(1) }
-
-      for (let i = 0; i < KEY_INCREMENTS.length; i++) {
-        this.increments[KEY_INCREMENTS[i]] = 'off'
-      }
-      for (let i = 0; i < KEY_STEPS.length; i++) {
-        let keyStep = KEY_STEPS[i]
-        let j = null
-        this.steps[i] = 'inactive'
-        for (j = 0; j < keyStep.length; j++) {
-          this.notes[keyStep[j]] = 'off'
-          for (let key in chord) {
-            if (chord[key] === keyStep[j]) {
-              console.log('Is equal:', key, ': ', chord[key])
-              this.notes[keyStep[j]] = 'active'
-              this.steps[i] = 'active'
-              let diffKeyStep = i - oldKeyStep
-              if (oldKeyStep !== null && diffKeyStep > 0) {
-                console.log('old step', oldKeyStep, diffKeyStep)
-                let arc = diffKeyStep + '-' + availableArcs[diffKeyStep]++
-                console.log('arc:', arc)
-                let totalSteps = diffKeyStep
-                for (let k = 0; k < totalSteps; k++) {
-                  let rotatePart = i * STEP_ANG - diffKeyStep * STEP_ANG * 0.5 - diffKeyStep * K_STEP_ANG * 0.5 + k * K_STEP_ANG
-                  anime({ targets: '#step-' + (k + stepNum), rotate: rotatePart, easing: 'easeInOutCubic', delay: delay, duration: duration })
-                }
-                stepNum += totalSteps
-
-                anime({ targets: '#circle-arc-' + arc, rotate: oldKeyStep * STEP_ANG, easing: 'easeInOutCubic', delay: delay, duration: duration })
-                anime({ targets: '#join-' + arc, rotate: oldKeyStep * STEP_ANG, easing: 'easeInOutCubic', delay: delay, duration: duration })
-                anime({
-                  targets: '#circle-arc-' + arc + ' path',
-                  strokeDashoffset: [anime.setDashoffset, 0],
-                  opacity: 1,
-                  easing: 'easeInOutCubic',
-                  duration: duration,
-                  delay: delay * 2
-                })
-                console.log('set animations')
-              }
-
-              oldKeyStep = i
-              this.increments[key] = 'active'
-              let rotateAng = i * STEP_ANG
-              console.log('KEY:', key, '   :', rotateAng, delay, duration)
-              anime({ targets: '#' + key + '-text-outer', rotate: rotateAng, easing: 'easeInOutCubic', delay: delay, duration: duration })
-              anime({ targets: '#' + key + '-text-inner', rotate: -rotateAng, easing: 'easeInOutCubic', delay: delay, duration: duration })
-            }
-          }
-          if (this.steps[i] !== 'active') this.notes[keyStep[j]] = (j === (keyStep.length - 1)) ? 'inactive' : 'off'
-        }
-      }
-    }
-  }
-}
-</script>
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h1, h2 {
-  font-weight: normal;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
-.text-outer, .text-inner, .circle-arc, .join-stroke {
-  transform-origin:50% 50%;
-} 
-/* #fifth-text-outer {
-  transform-origin:70px 235px;
-} */
-.circle-arc path {
-  opacity: 0;
-}
-[active="off"] {
-  opacity: 0;
-}
-.text-outer {
-  opacity:0;
-}
-@keyframes fadein {
-  100% {opacity: 1;}
-}
-.text-outer[active="active"] {
-  opacity:1;
-}
-#chromatic {
-/*  width:500px;*/
-}
-
-</style>

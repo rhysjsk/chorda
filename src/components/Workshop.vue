@@ -1,16 +1,16 @@
 <template>
   <div class="workshop">
-    <Menu />
+    <Menu /> 
     <div class="col">
-      <!-- <Metronome /> -->
-      <!-- <Chord /> -->
-      <!-- <Notation :bus="bus"/> -->
+      <Metronome />
+      <Chord />
+      <Notation :bus="bus"/>
     </div>
     <div class="col">
-      <!-- <Keyboard :bus="bus"/> -->
+      <Keyboard :bus="bus"/>
       <div class="row">
         <Chromatic :bus="bus"/>
-        <!-- <Description /> -->
+        <Description />
         <div class="clearfix"></div>
       </div>
     </div>
@@ -38,13 +38,13 @@ export default {
     }
   },
   components: {
-    // Notation,
-    Chromatic
-    // Metronome,
-    // Menu,
-    // Keyboard,
-    // Chord,
-    // Description
+    Notation,
+    Chromatic,
+    Metronome,
+    Menu,
+    Keyboard,
+    Chord,
+    Description
   },
   mounted () {
     this.bus.$emit('showChord', {
