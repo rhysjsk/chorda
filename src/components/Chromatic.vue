@@ -43,6 +43,10 @@
     <rect width="500" height="500" x="0" y="0" style="fill-opacity:0;" />
     <path d="M 282.35517,27.054332 A 225.28122,225.28122 0 0 1 473.84921,224.63938" style="fill:none;stroke:#12a077;stroke-width:4;stroke-linecap:round;" />
   </g>
+  <g id="circle-arc-3-3" class="circle-arc">
+    <rect width="500" height="500" x="0" y="0" style="fill-opacity:0;" />
+    <path d="M 282.35517,27.054332 A 225.28122,225.28122 0 0 1 473.84921,224.63938" style="fill:none;stroke:#12a077;stroke-width:4;stroke-linecap:round;" />
+  </g>
   <g id="step-0" class="step">
     <rect width="500" height="500" x="0" y="0" style="fill-opacity:0;" />
     <path d="m 257.87165,24.718781 a 7.8716516,7.8716516 0 1 1 -15.7433,0 7.8716516,7.8716516 0 1 1 15.7433,0 z" style="fill:#12a077;" />
@@ -347,6 +351,10 @@
     <rect width="500" height="500" x="0" y="0" style="fill-opacity:0;" />
     <path d="M 256.92545,105.9977 393.25324,240.82738" style="stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;" />
   </g>
+  <g id="join-3-3" class="join-stroke">
+    <rect width="500" height="500" x="0" y="0" style="fill-opacity:0;" />
+    <path d="M 256.92545,105.9977 393.25324,240.82738" style="stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;" />
+  </g>
   <g id="join-4-1" class="join-stroke">
     <rect width="500" height="500" x="0" y="0" style="fill-opacity:0;" />
     <path d="M 254.67829,106.74676 380.51933,311.98749" style="stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;" />
@@ -483,7 +491,7 @@ export default {
             }
           }
         }
-        if (this.steps[i] !== 'active') {
+        if (this.steps[i2] !== 'active') {
           this.notes[keyStep[j]] = (j === (keyStep.length - 1)) ? 'inactive' : 'off'
         }
         i++

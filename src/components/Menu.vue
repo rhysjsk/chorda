@@ -18,27 +18,27 @@
       </div>
       <div class="clearfix"></div>
     </div>
-    <div id="options-chords" class="menu-row">
+    <div id="options-chords-triad" class="menu-row">
       <div class="menu-title">
-        Chords
+        Chords 5
       </div>
-      <div v-for="(option, key) in settings.chords" v-on:click="onChordSelect(key)" :state="settings.chords[key]?'selected':'unselected'" v-bind:key="key" class="button">{{capitaliseText(key)}}
+      <div v-for="(option, key) in settings.chords_triad" v-on:click="onTriadChordSelect(key)" :state="settings.chords_triad[key]?'selected':'unselected'" v-bind:key="key" class="button">{{capitaliseText(key)}}
       </div>
       <div class="clearfix"></div>
     </div>
-    <div id="options-modes" class="menu-row">
+    <div id="options-chords-tetrad" class="menu-row">
       <div class="menu-title">
-        Modes
+        Chords 7
       </div>
-      <div v-for="(option, key) in settings.modes" v-on:click="onModeSelect(key)" :state="settings.modes[key]?'selected':'unselected'" v-bind:key="key" class="button">{{capitaliseText(key)}}
+      <div v-for="(option, key) in settings.chords_tetrad" v-on:click="onTetradChordSelect(key)" :state="settings.chords_tetrad[key]?'selected':'unselected'" v-bind:key="key" class="button">{{capitaliseText(key)}}
       </div>
       <div class="clearfix"></div>
     </div>
     <div id="options-periods" class="menu-row">
       <div class="menu-title">
-        Periods
+        BPM
       </div>
-      <div v-for="(option, key) in settings.periods" v-on:click="onPeriodSelect(key)" :state="settings.periods[key]?'selected':'unselected'" v-bind:key="key" class="button">{{capitaliseText(key)}}
+      <div v-for="(option, key) in settings.speeds" v-on:click="onSpeedSelect(key)" :state="settings.speeds[key]?'selected':'unselected'" v-bind:key="key" class="button">{{capitaliseText(key)}}
       </div>
       <div class="clearfix"></div>
     </div>
@@ -51,34 +51,30 @@ import Vue from 'vue'
 const OPTIONS_STYLES = {
   beginner: {
     keys: ['c', 'd', 'e'],
-    chords: ['triads'],
-    modes: ['major'],
-    periods: ['whole']
+    chords_triad: ['major'],
+    chords_tetrad: []
   },
   blues: {
     keys: ['c', 'd', 'e', 'f', 'g', 'a', 'b'],
-    chords: ['triads', 'tetrads'],
-    modes: ['minor', 'suspended'],
-    periods: ['whole', 'half']
+    chords_triad: ['major', 'minor', 'diminished'],
+    chords_tetrad: ['minor 7th']
   },
   rock: {
     keys: ['c', 'd', 'e', 'g'],
-    chords: ['triads'],
-    modes: ['major', 'minor', 'dominant'],
-    periods: ['whole', 'half', 'quarter']
+    chords_triad: ['major', 'minor'],
+    chords_tetrad: ['major 7th', 'minor 7th']
   },
   jazz: {
     keys: ['c', 'd', 'e', 'f', 'g', 'a', 'b'],
-    chords: ['triads', 'tetrads'],
-    modes: ['major', 'minor', 'dominant', 'suspended'],
-    periods: ['whole', 'half', 'quarter', 'eighth']
+    chords_triad: ['major', 'minor', 'diminished'],
+    chords_tetrad: ['major 7th', 'minor 7th', 'dominant', 'flat 5']
   }
 }
 
 const OPTIONS_KEYS = ['c', 'd', 'e', 'f', 'g', 'a', 'b']
-const OPTIONS_CHORDS = ['triads', 'tetrads']
-const OPTIONS_MODES = ['major', 'minor', 'dominant', 'suspended']
-const OPTIONS_PERIODS = ['whole', 'half', 'quarter', 'eighth']
+const OPTIONS_CHORDS_TRIAD = ['major', 'minor', 'diminished']
+const OPTIONS_CHORDS_TETRAD = ['dominant', 'major 7th', 'minor 7th', 'flat 5']
+const OPTIONS_SPEEDS = ['180', '120', '90', '60', '30']
 
 var originalSettings = {}
 originalSettings.keys = {}
@@ -89,17 +85,17 @@ originalSettings.styles = {}
 for (let i in OPTIONS_STYLES) {
   originalSettings.styles[i] = false
 }
-originalSettings.chords = {}
-for (let i = 0; i < OPTIONS_CHORDS.length; i++) {
-  originalSettings.chords[OPTIONS_CHORDS[i]] = false
+originalSettings.chords_triad = {}
+for (let i = 0; i < OPTIONS_CHORDS_TRIAD.length; i++) {
+  originalSettings.chords_triad[OPTIONS_CHORDS_TRIAD[i]] = false
 }
-originalSettings.modes = {}
-for (let i = 0; i < OPTIONS_MODES.length; i++) {
-  originalSettings.modes[OPTIONS_MODES[i]] = false
+originalSettings.chords_tetrad = {}
+for (let i = 0; i < OPTIONS_CHORDS_TETRAD.length; i++) {
+  originalSettings.chords_tetrad[OPTIONS_CHORDS_TETRAD[i]] = false
 }
-originalSettings.periods = {}
-for (let i = 0; i < OPTIONS_PERIODS.length; i++) {
-  originalSettings.periods[OPTIONS_PERIODS[i]] = false
+originalSettings.speeds = {}
+for (let i = 0; i < OPTIONS_SPEEDS.length; i++) {
+  originalSettings.speeds[OPTIONS_SPEEDS[i]] = false
 }
 
 export default {
@@ -111,18 +107,22 @@ export default {
   },
   mounted () {
     this.onStyleSelect('beginner')
+    this.onSpeedSelect(30)
   },
   methods: {
-    onModeSelect: function (option, event) {
-      Vue.set(this.settings.modes, option, !this.settings.modes[option])
+    onTriadChordSelect: function (option, event) {
+      Vue.set(this.settings.chords_triad, option, !this.settings.chords_triad[option])
       this.$emit('settings', this.settings)
     },
-    onPeriodSelect: function (option, event) {
-      Vue.set(this.settings.periods, option, !this.settings.periods[option])
+    onSpeedSelect: function (option, event) {
+      for (let k in this.settings.speeds) {
+        this.settings.speeds[k] = false
+      }
+      Vue.set(this.settings.speeds, option, true)
       this.$emit('settings', this.settings)
     },
-    onChordSelect: function (option, event) {
-      Vue.set(this.settings.chords, option, !this.settings.chords[option])
+    onTetradChordSelect: function (option, event) {
+      Vue.set(this.settings.chords_tetrad, option, !this.settings.chords_tetrad[option])
       this.$emit('settings', this.settings)
     },
     onKeySelect: function (option, event) {
@@ -141,23 +141,17 @@ export default {
       for (let i = 0; i < selectedStyle.keys.length; i++) {
         this.settings.keys[selectedStyle.keys[i]] = true
       }
-      for (let i in this.settings.chords) {
-        this.settings.chords[i] = false
+      for (let i in this.settings.chords_triad) {
+        this.settings.chords_triad[i] = false
       }
-      for (let i = 0; i < selectedStyle.chords.length; i++) {
-        this.settings.chords[selectedStyle.chords[i]] = true
+      for (let i = 0; i < selectedStyle.chords_triad.length; i++) {
+        this.settings.chords_triad[selectedStyle.chords_triad[i]] = true
       }
-      for (let i in this.settings.modes) {
-        this.settings.modes[i] = false
+      for (let i in this.settings.chords_tetrad) {
+        this.settings.chords_tetrad[i] = false
       }
-      for (let i = 0; i < selectedStyle.modes.length; i++) {
-        this.settings.modes[selectedStyle.modes[i]] = true
-      }
-      for (let i in this.settings.periods) {
-        this.settings.periods[i] = false
-      }
-      for (let i = 0; i < selectedStyle.periods.length; i++) {
-        this.settings.periods[selectedStyle.periods[i]] = true
+      for (let i = 0; i < selectedStyle.chords_tetrad.length; i++) {
+        this.settings.chords_tetrad[selectedStyle.chords_tetrad[i]] = true
       }
       this.$emit('settings', this.settings)
     },

@@ -25,6 +25,12 @@ export default {
       tickSound: null
     }
   },
+  created () {
+    this.bus.$on('updateBPM', (args) => {
+      this.updateBPM(args)
+    })
+  },
+  props: ['bus'],
   computed: {
     tickCount1: function () { return this.tickCount >= 0 },
     tickCount2: function () { return this.tickCount >= 1 },
@@ -38,10 +44,18 @@ export default {
     playState: function (val) {
       clearInterval(this.clock)
       this.tickCount = 0
-      if (val === 'playing') this.clock = setInterval(this.tick, Math.round((60 / this.BPM) * 1000))
+      if (val === 'playing') this.setBPMInterval()
     }
   },
   methods: {
+    updateBPM: function (speed) {
+      this.BPM = speed
+      if (this.playState === 'playing') this.setBPMInterval()
+    },
+    setBPMInterval: function () {
+      clearInterval(this.clock)
+      this.clock = setInterval(this.tick, Math.round((60 / this.BPM) * 1000))
+    },
     togglePlayPause: function (event) {
       this.playState = (this.playState === 'paused') ? 'playing' : 'paused'
     },

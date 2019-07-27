@@ -1,65 +1,830 @@
 {
-  "c":{
-    "major": {
-  	  "triads": {
-  	  	"inversion0": {
-  	  	  "id": "cmaj",
-  	  	  "name": "C",
-  	  	  "subtitle": "maj",
-  	  	  "desc": {"title":"The classic C Major", "body":"This is the most common, and basic, chord, the root triad in the C major scale."},
-  	  	  "structure": {"c3": {"pitch": "natural", "finger":"1"}, "e3": {"pitch": "natural", "finger": "3"}, "g3": {"pitch": "natural", "finger": "5"}}
-  	    }
+  "c":{    
+    "triads": {
+      "major": {
+        "inversion0": {
+          "id": "cmajinv0",
+          "name": "C",
+          "subtitle": "maj",
+          "desc": {"title":"The classic C Major", "body":"This is the most common, and basic, chord, the root triad in the C major scale."},
+          "structure": {"c3": {"pitch": "natural", "finger":"1"}, "e3": {"pitch": "natural", "finger": "3"}, "g3": {"pitch": "natural", "finger": "5"}}
+        }
+      },
+      "minor": {
+        "inversion0": {
+          "id": "cmininv0",
+          "name": "C",
+          "subtitle": "min",
+          "desc": {"title":"C minor", "body":"This is often the introduction to the minor chord. Listen to its melancholy sound that feels unresolved."},
+          "structure": {"c3": {"pitch": "natural", "finger": "1"}, "e3": {"pitch": "flat", "finger": "3"}, "g3": {"pitch": "natural", "finger": "5"}}  
+        }
+      },
+      "dim": {
+        "inversion0": {
+          "id": "cdim",
+          "name": "C",
+          "subtitle": "dim",
+          "desc": {"title":"C diminished", "body":""},
+          "structure": {"c3": {"pitch": "natural", "finger": "1"}, "e3": {"pitch": "flat", "finger": "3"}, "g3": {"pitch": "flat", "finger":"4"}}
+        }
       }
     },
-    "minor": {
-      "triads": {
-      	"inversion0": {
-      	  "id": "cmin",
-  	  	  "name": "C",
-  	  	  "subtitle": "min",
-  	  	  "desc": {"title":"C minor", "body":"This is often the introduction to the minor chord. Listen to its melancholy sound that feels unresolved."},
-  	  	  "structure": {"c3": {"pitch": "natural", "finger": "1"}, "e3": {"pitch": "flat", "finger": "3"}, "g3": {"pitch": "natural", "finger": "5"}}		
-      	}
+    "tetrads": {
+      "major7th": {
+        "inversion0": {
+          "id": "cmaj7thinv0",
+          "name": "C",
+          "subtitle": "7th",
+          "desc": {"title":"C major 7th", "body":""},
+          "structure": {"c3": {"pitch": "natural", "finger":"1"}, "e3": {"pitch": "natural", "finger": "3"}, "g3": {"pitch": "natural", "finger": "4"}, "b4": {"pitch": "natural", "finger":"5"}}
+        }
+      },
+      "dom7th": {
+        "inversion0": {
+          "id": "cmajdom7thinv0",
+          "name": "C",
+          "subtitle": "dom 7th",
+          "desc": {"title": "C Dominant 7th", "body":""},
+          "structure": {"c3": {"pitch": "natural", "finger":"1"}, "e3": {"pitch": "natural", "finger": "3"}, "g3": {"pitch": "natural", "finger": "4"}, "b4": {"pitch": "flat", "finger":"5"}}
+        }
+      },
+      "minor7th": {
+        "inversion0": {
+          "id": "cdim",
+          "name": "C",
+          "subtitle": "dim",
+          "desc": {"title":"C diminished", "body":""},
+          "structure": {"c3": {"pitch": "natural", "finger": "1"}, "e3": {"pitch": "flat", "finger": "3"}, "g3": {"pitch": "natural", "finger":"4"}, "b4":{"pitch":"flat", "finger":"5"}}
+        }
+      },
+      "flat5": {
+        "inversion0": {
+          "id": "cdim",
+          "name": "C",
+          "subtitle": "dim",
+          "desc": {"title":"C diminished", "body":""},
+          "structure": {"c3": {"pitch": "natural", "finger": "1"}, "e3": {"pitch": "flat", "finger": "3"}, "g3": {"pitch": "flat", "finger":"4"}, "b4":{"pitch":"flat", "finger":"5"}}
+        }
       }
     }
-  }, 
-  "f": {
-  	"minor": {
-  	  "triads": {
-  	    "inversion0": {
-  	      "id": "fmajinv1",
-  	      "name": "F",
-  	      "subtitle": "min",
-  	      "desc": {"title": "F major", "body":"This is the F major chord that everyone uses, but it's actually the 1st inversion, as you can see in the Chromatic diagram."},
-  	      "structure": {"c3": {"pitch": "natural", "finger": "1"}, "f3": {"pitch": "natural", "finger": "3"}, "g3": {"pitch": "natural", "finger": "5"}}
-  	    }
-  	  }
-  	},
-    "major": {
-      "triads": {
+  },
+  "cs":{
+    "triads": {
+      "major": {
         "inversion0": {
-          "id": "fmajinv1",
-          "name": "F",
+          "id": "csmajinv0",
+          "name": "C#",
           "subtitle": "maj",
-          "desc": {"title": "F major", "body": "This is the F major chord that everyone uses, but it's actually the 1st inversion, as you can see in the Chromatic diagram."},
-          "structure": {"f3": {"pitch": "natural", "finger": "3"}, "a4": {"pitch": "natural", "finger": "5"}, "c3": {"pitch": "natural", "finger": "1"}}
+          "desc": {"title":"C# major", "body":""},
+          "structure": {"c3": {"pitch": "sharp", "finger":"1"}, "e3": {"pitch": "sharp", "finger": "3"}, "g3": {"pitch": "sharp", "finger": "5"}}
+        }
+      },
+      "minor": {
+        "inversion0": {
+          "id": "csmininv0",
+          "name": "C#",
+          "subtitle": "min",
+          "desc": {"title":"C# minor", "body":""},
+          "structure": {"c3": {"pitch": "sharp", "finger": "1"}, "e3": {"pitch": "natural", "finger": "3"}, "g3": {"pitch": "sharp", "finger": "5"}}  
+        }
+      },
+      "dim": {
+        "inversion0": {
+          "id": "csdiminv0",
+          "name": "C#",
+          "subtitle": "dim",
+          "desc": {"title":"C# diminished", "body":""},
+          "structure": {"c3": {"pitch": "sharp", "finger": "1"}, "e3": {"pitch": "natural", "finger": "3"}, "g3": {"pitch": "natural", "finger":"4"}}
+        }
+      }
+    },
+    "tetrads": {
+      "major7th": {
+        "inversion0": {
+          "id": "csmaj7thinv0",
+          "name": "C#",
+          "subtitle": "7th",
+          "desc": {"title":"C# major 7th", "body":""},
+          "structure": {"c3": {"pitch": "sharp", "finger":"1"}, "f3": {"pitch": "natural", "finger": "3"}, "g3": {"pitch": "sharp", "finger": "4"}, "c4": {"pitch": "natural", "finger":"5"}}
+        }
+      },
+      "dom7th": {
+        "inversion0": {
+          "id": "csmajdom7thinv0",
+          "name": "C#",
+          "subtitle": "dom 7th",
+          "desc": {"title": "C# Dominant 7th", "body":""},
+          "structure": {"c3": {"pitch": "sharp", "finger":"1"}, "f3": {"pitch": "natural", "finger": "3"}, "g3": {"pitch": "sharp", "finger": "4"}, "b4": {"pitch": "natural", "finger":"5"}}
+        }
+      },
+      "minor7th": {
+        "inversion0": {
+          "id": "csmin7thinv0",
+          "name": "C#",
+          "subtitle": "min 7th",
+          "desc": {"title":"C# minor 7th", "body":""},
+          "structure": {"c3": {"pitch": "sharp", "finger": "1"}, "e3": {"pitch": "natural", "finger": "3"}, "g3": {"pitch": "sharp", "finger":"4"}, "b4":{"pitch":"natural", "finger":"5"}}
+        }
+      },
+      "flat5": {
+        "inversion0": {
+          "id": "csminflat5inv0",
+          "name": "C#",
+          "subtitle": "flat 5",
+          "desc": {"title":"C diminished", "body":""},
+          "structure": {"c3": {"pitch": "sharp", "finger": "1"}, "e3": {"pitch": "natural", "finger": "3"}, "g3": {"pitch": "natural", "finger":"4"}, "b4":{"pitch":"natural", "finger":"5"}}
         }
       }
     }
   }, 
   "d": {
-  	"major": {
-  	  "tetrads": {
-  	  	"sus": {
-  	  	  "inversion0": {
-  	  	  	"id": "d7sus",
-  	  	  	"title": "D7",
-  	  	  	"subtitle": "sus",
-  	  	  	"desc": {"title": "D 7 suspended", "body": "Probably the most universal of the 7th chords, the D7 has two characteristics: It's missing its perfect 5th, giving it the 'suspended' term, and it has a augmented 7th."},
-  	  	  	"structure": {}
-  	  	  }
-  	  	}
-  	  }
-  	}
+    "triads": {
+      "major": {
+        "inversion0": {
+          "id": "dmajinv0",
+          "name": "D",
+          "subtitle": "maj",
+          "desc": {"title":"D major", "body":""},
+          "structure": {"d3": {"pitch": "natural", "finger":"1"}, "f3": {"pitch": "sharp", "finger": "3"}, "a4": {"pitch": "natural", "finger": "5"}}
+        }
+      },
+      "minor": {
+        "inversion0": {
+          "id": "dmininv0",
+          "name": "D",
+          "subtitle": "min",
+          "desc": {"title":"D minor", "body":""},
+          "structure": {"d3": {"pitch": "natural", "finger": "1"}, "f3": {"pitch": "natural", "finger": "3"}, "a4": {"pitch": "natural", "finger": "5"}}  
+        }
+      },
+      "dim": {
+        "inversion0": {
+          "id": "ddiminv0",
+          "name": "D",
+          "subtitle": "dim",
+          "desc": {"title":"D diminished", "body":""},
+          "structure": {"d3": {"pitch": "natural", "finger": "1"}, "f3": {"pitch": "natural", "finger": "3"}, "a4": {"pitch": "flat", "finger":"4"}}
+        }
+      }
+    },
+    "tetrads": {
+      "major7th": {
+        "inversion0": {
+          "id": "dmaj7thinv0",
+          "name": "D",
+          "subtitle": "7th",
+          "desc": {"title":"D major 7th", "body":""},
+          "structure": {"d3": {"pitch": "natural", "finger":"1"}, "f3": {"pitch": "sharp", "finger": "3"}, "a4": {"pitch": "natural", "finger": "4"}, "c4": {"pitch": "sharp", "finger":"5"}}
+        }
+      },
+      "dom7th": {
+        "inversion0": {
+          "id": "dmajdom7thinv0",
+          "name": "D",
+          "subtitle": "dom 7th",
+          "desc": {"title": "D Dominant 7th", "body":""},
+          "structure": {"d3": {"pitch": "natural", "finger":"1"}, "f3": {"pitch": "sharp", "finger": "3"}, "a4": {"pitch": "natural", "finger": "4"}, "c4": {"pitch": "natural", "finger":"5"}}
+        }
+      },
+      "minor7th": {
+        "inversion0": {
+          "id": "dmin7thinv0",
+          "name": "D",
+          "subtitle": "min 7th",
+          "desc": {"title":"D minor 7th", "body":""},
+          "structure": {"d3": {"pitch": "natural", "finger": "1"}, "f3": {"pitch": "natural", "finger": "3"}, "a4": {"pitch": "natural", "finger":"4"}, "c4":{"pitch":"natural", "finger":"5"}}
+        }
+      },
+      "flat5": {
+        "inversion0": {
+          "id": "dminflat5inv0",
+          "name": "D",
+          "subtitle": "flat 5",
+          "desc": {"title":"D minor flat 5", "body":""},
+          "structure": {"d3": {"pitch": "natural", "finger": "1"}, "f3": {"pitch": "natural", "finger": "3"}, "a4": {"pitch": "flat", "finger":"4"}, "c4":{"pitch":"natural", "finger":"5"}}
+        }
+      }
+    }
+  },
+  "eb": {
+    "triads": {
+      "major": {
+        "inversion0": {
+          "id": "ebmajinv0",
+          "name": "E♭",
+          "subtitle": "maj",
+          "desc": {"title":"E♭ major", "body":""},
+          "structure": {"e3": {"pitch": "flat", "finger":"1"}, "g3": {"pitch": "natural", "finger": "3"}, "b4": {"pitch": "flat", "finger": "5"}}
+        }
+      },
+      "minor": {
+        "inversion0": {
+          "id": "ebmininv0",
+          "name": "E♭",
+          "subtitle": "min",
+          "desc": {"title":"E♭ minor", "body":""},
+          "structure": {"e3": {"pitch": "flat", "finger": "1"}, "g3": {"pitch": "flat", "finger": "3"}, "b4": {"pitch": "flat", "finger": "5"}}  
+        }
+      },
+      "dim": {
+        "inversion0": {
+          "id": "ebdiminv0",
+          "name": "E♭",
+          "subtitle": "dim",
+          "desc": {"title":"E♭ diminished", "body":""},
+          "structure": {"e3": {"pitch": "flat", "finger": "1"}, "g3": {"pitch": "flat", "finger": "3"}, "a4": {"pitch": "natural", "finger":"4"}}
+        }
+      }
+    },
+    "tetrads": {
+      "major7th": {
+        "inversion0": {
+          "id": "ebmaj7thinv0",
+          "name": "E♭",
+          "subtitle": "7th",
+          "desc": {"title":"E♭ major 7th", "body":""},
+          "structure": {"e3": {"pitch": "flat", "finger":"1"}, "g3": {"pitch": "natural", "finger": "3"}, "b4": {"pitch": "flat", "finger": "4"}, "d4": {"pitch": "natural", "finger":"5"}}
+        }
+      },
+      "dom7th": {
+        "inversion0": {
+          "id": "ebmajdom7thinv0",
+          "name": "E♭",
+          "subtitle": "dom 7th",
+          "desc": {"title": "E♭ Dominant 7th", "body":""},
+          "structure": {"e3": {"pitch": "flat", "finger":"1"}, "g3": {"pitch": "natural", "finger": "3"}, "b4": {"pitch": "flat", "finger": "4"}, "d4": {"pitch": "flat", "finger":"5"}}
+        }
+      },
+      "minor7th": {
+        "inversion0": {
+          "id": "ebmin7thinv0",
+          "name": "E♭",
+          "subtitle": "min 7th",
+          "desc": {"title":"E♭ minor 7th", "body":""},
+          "structure": {"e3": {"pitch": "flat", "finger": "1"}, "g3": {"pitch": "flat", "finger": "3"}, "b4": {"pitch": "flat", "finger":"4"}, "d4":{"pitch":"flat", "finger":"5"}}
+        }
+      },
+      "flat5": {
+        "inversion0": {
+          "id": "ebminflat5inv0",
+          "name": "E♭",
+          "subtitle": "flat 5",
+          "desc": {"title":"E♭ minor flat 5", "body":""},
+          "structure": {"e3": {"pitch": "flat", "finger": "1"}, "g3": {"pitch": "flat", "finger": "3"}, "a4": {"pitch": "natural", "finger":"4"}, "d4":{"pitch":"flat", "finger":"5"}}
+        }
+      }
+    }
+  }, 
+  "e": {
+    "triads": {
+      "major": {
+        "inversion0": {
+          "id": "emajinv0",
+          "name": "E",
+          "subtitle": "maj",
+          "desc": {"title":"E major", "body":""},
+          "structure": {"e3": {"pitch": "natural", "finger":"1"}, "g3": {"pitch": "sharp", "finger": "3"}, "b4": {"pitch": "natural", "finger": "5"}}
+        }
+      },
+      "minor": {
+        "inversion0": {
+          "id": "emininv0",
+          "name": "E",
+          "subtitle": "min",
+          "desc": {"title":"E minor", "body":""},
+          "structure": {"e3": {"pitch": "natural", "finger": "1"}, "g3": {"pitch": "natural", "finger": "3"}, "b4": {"pitch": "natural", "finger": "5"}}  
+        }
+      },
+      "dim": {
+        "inversion0": {
+          "id": "ediminv0",
+          "name": "E",
+          "subtitle": "dim",
+          "desc": {"title":"E diminished", "body":""},
+          "structure": {"e3": {"pitch": "natural", "finger": "1"}, "g3": {"pitch": "natural", "finger": "3"}, "b4": {"pitch": "flat", "finger":"4"}}
+        }
+      }
+    },
+    "tetrads": {
+      "7th": {
+        "inversion0": {
+          "id": "emaj7thinv0",
+          "name": "E",
+          "subtitle": "7th",
+          "desc": {"title":"E major 7th", "body":""},
+          "structure": {"e3": {"pitch": "natural", "finger":"1"}, "g3": {"pitch": "sharp", "finger": "3"}, "b4": {"pitch": "natural", "finger": "4"}, "d4": {"pitch": "sharp", "finger":"5"}}
+        }
+      },
+      "dom7th": {
+        "inversion0": {
+          "id": "emajdom7thinv0",
+          "name": "E",
+          "subtitle": "dom 7th",
+          "desc": {"title": "E Dominant 7th", "body":""},
+          "structure": {"e3": {"pitch": "natural", "finger":"1"}, "g3": {"pitch": "sharp", "finger": "3"}, "b4": {"pitch": "natural", "finger": "4"}, "d4": {"pitch": "natural", "finger":"5"}}
+        }
+      },
+      "7th": {
+        "inversion0": {
+          "id": "emin7thinv0",
+          "name": "E",
+          "subtitle": "min 7th",
+          "desc": {"title":"E minor 7th", "body":""},
+          "structure": {"e3": {"pitch": "natural", "finger": "1"}, "g3": {"pitch": "natural", "finger": "3"}, "b4": {"pitch": "natural", "finger":"4"}, "d4":{"pitch":"natural", "finger":"5"}}
+        }
+      },
+      "flat5": {
+        "inversion0": {
+          "id": "eminflat5inv0",
+          "name": "E",
+          "subtitle": "flat 5",
+          "desc": {"title":"E minor flat 5", "body":""},
+          "structure": {"e3": {"pitch": "natural", "finger": "1"}, "g3": {"pitch": "natural", "finger": "3"}, "b4": {"pitch": "flat", "finger":"4"}, "d4":{"pitch":"natural", "finger":"5"}}
+        }
+      }
+    }
+  }, 
+  "f": {
+    "triads": {
+      "major": {
+        "inversion0": {
+          "id": "fmajinv0",
+          "name": "F",
+          "subtitle": "maj",
+          "desc": {"title":"F major", "body":""},
+          "structure": {"f3": {"pitch": "natural", "finger":"1"}, "a4": {"pitch": "natural", "finger": "3"}, "c4": {"pitch": "natural", "finger": "5"}}
+        }
+      },
+      "minor": {
+        "inversion0": {
+          "id": "fmininv0",
+          "name": "F",
+          "subtitle": "min",
+          "desc": {"title":"F minor", "body":""},
+          "structure": {"f3": {"pitch": "natural", "finger": "1"}, "a4": {"pitch": "flat", "finger": "3"}, "c4": {"pitch": "natural", "finger": "5"}}  
+        }
+      },
+      "dim": {
+        "inversion0": {
+          "id": "fdiminv0",
+          "name": "F",
+          "subtitle": "dim",
+          "desc": {"title":"F diminished", "body":""},
+          "structure": {"f3": {"pitch": "natural", "finger": "1"}, "a4": {"pitch": "flat", "finger": "3"}, "c4": {"pitch": "flat", "finger":"4"}}
+        }
+      }
+    },
+    "tetrads": {
+      "major7th": {
+        "inversion0": {
+          "id": "fmaj7thinv0",
+          "name": "F",
+          "subtitle": "7th",
+          "desc": {"title":"F major 7th", "body":""},
+          "structure": {"f3": {"pitch": "natural", "finger":"1"}, "a4": {"pitch": "natural", "finger": "3"}, "c4": {"pitch": "natural", "finger": "4"}, "e4": {"pitch": "natural", "finger":"5"}}
+        }
+      },
+      "dom7th": {
+        "inversion0": {
+          "id": "fmajdom7thinv0",
+          "name": "F",
+          "subtitle": "dom 7th",
+          "desc": {"title": "F Dominant 7th", "body":""},
+          "structure": {"f3": {"pitch": "natural", "finger":"1"}, "a4": {"pitch": "natural", "finger": "3"}, "c4": {"pitch": "natural", "finger": "4"}, "e4": {"pitch": "flat", "finger":"5"}}
+        }
+      },
+      "minor7th": {
+        "inversion0": {
+          "id": "fmin7thinv0",
+          "name": "F",
+          "subtitle": "min 7th",
+          "desc": {"title":"F minor 7th", "body":""},
+          "structure": {"f3": {"pitch": "natural", "finger": "1"}, "a4": {"pitch": "flat", "finger": "3"}, "c4": {"pitch": "natural", "finger":"4"}, "e4":{"pitch":"flat", "finger":"5"}}
+        }
+      },
+      "flat5": {
+        "inversion0": {
+          "id": "fminflat5inv0",
+          "name": "F",
+          "subtitle": "flat 5",
+          "desc": {"title":"F minor flat 5", "body":""},
+          "structure": {"f3": {"pitch": "natural", "finger": "1"}, "a4": {"pitch": "flat", "finger": "3"}, "b4": {"pitch": "natural", "finger":"4"}, "e4":{"pitch":"flat", "finger":"5"}}
+        }
+      }
+    }
+  }, 
+  "fs": {
+    "triads": {
+      "major": {
+        "inversion0": {
+          "id": "fsmajinv0",
+          "name": "F#",
+          "subtitle": "maj",
+          "desc": {"title":"F# major", "body":""},
+          "structure": {"f3": {"pitch": "sharp", "finger":"1"}, "a4": {"pitch": "sharp", "finger": "3"}, "c4": {"pitch": "sharp", "finger": "5"}}
+        }
+      },
+      "minor": {
+        "inversion0": {
+          "id": "fsmininv0",
+          "name": "F#",
+          "subtitle": "min",
+          "desc": {"title":"F# minor", "body":""},
+          "structure": {"f3": {"pitch": "sharp", "finger": "1"}, "a4": {"pitch": "natural", "finger": "3"}, "c4": {"pitch": "sharp", "finger": "5"}}  
+        }
+      },
+      "dim": {
+        "inversion0": {
+          "id": "fsdiminv0",
+          "name": "F#",
+          "subtitle": "dim",
+          "desc": {"title":"F# diminished", "body":""},
+          "structure": {"f3": {"pitch": "sharp", "finger": "1"}, "a4": {"pitch": "natural", "finger": "3"}, "c4": {"pitch": "natural", "finger":"4"}}
+        }
+      }
+    },
+    "tetrads": {
+      "major7th": {
+        "inversion0": {
+          "id": "fsmaj7thinv0",
+          "name": "F#",
+          "subtitle": "7th",
+          "desc": {"title":"F# major 7th", "body":""},
+          "structure": {"f3": {"pitch": "sharp", "finger":"1"}, "a4": {"pitch": "sharp", "finger": "3"}, "c4": {"pitch": "sharp", "finger": "4"}, "e4": {"pitch": "sharp", "finger":"5"}}
+        }
+      },
+      "dom7th": {
+        "inversion0": {
+          "id": "fsmajdom7thinv0",
+          "name": "F#",
+          "subtitle": "dom 7th",
+          "desc": {"title": "F# Dominant 7th", "body":""},
+          "structure": {"f3": {"pitch": "sharp", "finger":"1"}, "a4": {"pitch": "sharp", "finger": "3"}, "c4": {"pitch": "sharp", "finger": "4"}, "e4": {"pitch": "natural", "finger":"5"}}
+        }
+      },
+      "minor7th": {
+        "inversion0": {
+          "id": "fsmin7thinv0",
+          "name": "F#",
+          "subtitle": "min 7th",
+          "desc": {"title":"F# minor 7th", "body":""},
+          "structure": {"f3": {"pitch": "sharp", "finger": "1"}, "a4": {"pitch": "natural", "finger": "3"}, "c4": {"pitch": "sharp", "finger":"4"}, "e4":{"pitch":"natural", "finger":"5"}}
+        }
+      },
+      "flat5": {
+        "inversion0": {
+          "id": "fsminflat5inv0",
+          "name": "F#",
+          "subtitle": "flat 5",
+          "desc": {"title":"F# minor flat 5", "body":""},
+          "structure": {"f3": {"pitch": "sharp", "finger": "1"}, "a4": {"pitch": "natural", "finger": "3"}, "c4": {"pitch": "natural", "finger":"4"}, "e4":{"pitch":"natural", "finger":"5"}}
+        }
+      }
+    }
+  }, 
+  "g": {
+    "triads": {
+      "major": {
+        "inversion0": {
+          "id": "gmajinv0",
+          "name": "G",
+          "subtitle": "maj",
+          "desc": {"title":"G major", "body":""},
+          "structure": {"g3": {"pitch": "natural", "finger":"1"}, "b4": {"pitch": "natural", "finger": "3"}, "d4": {"pitch": "natural", "finger": "5"}}
+        }
+      },
+      "minor": {
+        "inversion0": {
+          "id": "gmininv0",
+          "name": "G",
+          "subtitle": "min",
+          "desc": {"title":"G minor", "body":""},
+          "structure": {"g3": {"pitch": "natural", "finger": "1"}, "b4": {"pitch": "flat", "finger": "3"}, "d4": {"pitch": "natural", "finger": "5"}}  
+        }
+      },
+      "dim": {
+        "inversion0": {
+          "id": "gdiminv0",
+          "name": "G",
+          "subtitle": "dim",
+          "desc": {"title":"G diminished", "body":""},
+          "structure": {"g3": {"pitch": "natural", "finger": "1"}, "b4": {"pitch": "flat", "finger": "3"}, "d4": {"pitch": "flat", "finger":"4"}}
+        }
+      }
+    },
+    "tetrads": {
+      "major7th": {
+        "inversion0": {
+          "id": "fmaj7thinv0",
+          "name": "G",
+          "subtitle": "7th",
+          "desc": {"title":"G major 7th", "body":""},
+          "structure": {"g3": {"pitch": "natural", "finger":"1"}, "b4": {"pitch": "natural", "finger": "2"}, "d4": {"pitch": "natural", "finger": "3"}, "f4": {"pitch": "sharp", "finger":"5"}}
+        }
+      },
+      "dom7th": {
+        "inversion0": {
+          "id": "gmajdom7thinv0",
+          "name": "G",
+          "subtitle": "dom 7th",
+          "desc": {"title": "G Dominant 7th", "body":""},
+          "structure": {"g3": {"pitch": "natural", "finger":"1"}, "b4": {"pitch": "natural", "finger": "3"}, "d4": {"pitch": "natural", "finger": "4"}, "f4": {"pitch": "natural", "finger":"5"}}
+        }
+      },
+      "minor7th": {
+        "inversion0": {
+          "id": "gmin7thinv0",
+          "name": "G",
+          "subtitle": "min 7th",
+          "desc": {"title":"G minor 7th", "body":""},
+          "structure": {"g3": {"pitch": "natural", "finger": "1"}, "b4": {"pitch": "flat", "finger": "3"}, "d4": {"pitch": "natural", "finger":"4"}, "f4":{"pitch":"natural", "finger":"5"}}
+        }
+      },
+      "flat5": {
+        "inversion0": {
+          "id": "gminflat5inv0",
+          "name": "G",
+          "subtitle": "flat 5",
+          "desc": {"title":"G minor flat 5", "body":""},
+          "structure": {"g3": {"pitch": "natural", "finger": "1"}, "b4": {"pitch": "flat", "finger": "3"}, "d4": {"pitch": "flat", "finger":"4"}, "f4":{"pitch":"natural", "finger":"5"}}
+        }
+      }
+    }
+  },
+  "ab": {
+    "triads": {
+      "major": {
+        "inversion0": {
+          "id": "abmajinv0",
+          "name": "A♭",
+          "subtitle": "maj",
+          "desc": {"title":"A♭ major", "body":""},
+          "structure": {"a4": {"pitch": "flat", "finger":"1"}, "c4": {"pitch": "natural", "finger": "3"}, "e4": {"pitch": "flat", "finger": "5"}}
+        }
+      },
+      "minor": {
+        "inversion0": {
+          "id": "abmininv0",
+          "name": "A♭",
+          "subtitle": "min",
+          "desc": {"title":"A♭ minor", "body":""},
+          "structure": {"a4": {"pitch": "flat", "finger": "1"}, "b4": {"pitch": "natural", "finger": "3"}, "e4": {"pitch": "flat", "finger": "5"}}  
+        }
+      },
+      "dim": {
+        "inversion0": {
+          "id": "abdiminv0",
+          "name": "A♭",
+          "subtitle": "dim",
+          "desc": {"title":"A♭ diminished", "body":""},
+          "structure": {"a4": {"pitch": "flat", "finger": "1"}, "b4": {"pitch": "natural", "finger": "3"}, "d4": {"pitch": "natural", "finger":"4"}}
+        }
+      }
+    },
+    "tetrads": {
+      "major7th": {
+        "inversion0": {
+          "id": "abmaj7thinv0",
+          "name": "A♭",
+          "subtitle": "7th",
+          "desc": {"title":"A♭ major 7th", "body":""},
+          "structure": {"a4": {"pitch": "flat", "finger":"1"}, "c4": {"pitch": "natural", "finger": "3"}, "e4": {"pitch": "flat", "finger": "4"}, "g4": {"pitch": "natural", "finger":"5"}}
+        }
+      },
+      "dom7th": {
+        "inversion0": {
+          "id": "abmajdom7thinv0",
+          "name": "A♭",
+          "subtitle": "dom 7th",
+          "desc": {"title": "A♭ Dominant 7th", "body":""},
+          "structure": {"a4": {"pitch": "flat", "finger":"1"}, "c4": {"pitch": "natural", "finger": "3"}, "e4": {"pitch": "flat", "finger": "4"}, "g4": {"pitch": "flat", "finger":"5"}}
+        }
+      },
+      "minor7th": {
+        "inversion0": {
+          "id": "abmin7thinv0",
+          "name": "A♭",
+          "subtitle": "min 7th",
+          "desc": {"title":"A♭ minor 7th", "body":""},
+          "structure": {"a4": {"pitch": "flat", "finger": "1"}, "b4": {"pitch": "natural", "finger": "3"}, "e4": {"pitch": "flat", "finger":"4"}, "g4":{"pitch":"flat", "finger":"5"}}
+        }
+      },
+      "flat5": {
+        "inversion0": {
+          "id": "abminflat5inv0",
+          "name": "A♭",
+          "subtitle": "flat 5",
+          "desc": {"title":"A♭ minor flat 5", "body":""},
+          "structure": {"a4": {"pitch": "flat", "finger": "1"}, "b4": {"pitch": "natural", "finger": "3"}, "d4": {"pitch": "natural", "finger":"4"}, "g4":{"pitch":"flat", "finger":"5"}}
+        }
+      }
+    }
+  },
+  "a": {
+    "triads": {
+      "major": {
+        "inversion0": {
+          "id": "amajinv0",
+          "name": "A",
+          "subtitle": "maj",
+          "desc": {"title":"A major", "body":""},
+          "structure": {"a4": {"pitch": "natural", "finger":"1"}, "c4": {"pitch": "sharp", "finger": "3"}, "e4": {"pitch": "natural", "finger": "5"}}
+        }
+      },
+      "minor": {
+        "inversion0": {
+          "id": "amininv0",
+          "name": "A",
+          "subtitle": "min",
+          "desc": {"title":"A minor", "body":""},
+          "structure": {"a4": {"pitch": "natural", "finger": "1"}, "c4": {"pitch": "natural", "finger": "3"}, "e4": {"pitch": "natural", "finger": "5"}}  
+        }
+      },
+      "dim": {
+        "inversion0": {
+          "id": "adiminv0",
+          "name": "A",
+          "subtitle": "dim",
+          "desc": {"title":"A diminished", "body":""},
+          "structure": {"a4": {"pitch": "natural", "finger": "1"}, "c4": {"pitch": "natural", "finger": "3"}, "e4": {"pitch": "flat", "finger":"4"}}
+        }
+      }
+    },
+    "tetrads": {
+      "major7th": {
+        "inversion0": {
+          "id": "amaj7thinv0",
+          "name": "A",
+          "subtitle": "7th",
+          "desc": {"title":"A major 7th", "body":""},
+          "structure": {"a4": {"pitch": "natural", "finger":"1"}, "c4": {"pitch": "sharp", "finger": "3"}, "e4": {"pitch": "natural", "finger": "4"}, "g4": {"pitch": "sharp", "finger":"5"}}
+        }
+      },
+      "dom7th": {
+        "inversion0": {
+          "id": "amajdom7thinv0",
+          "name": "A",
+          "subtitle": "dom 7th",
+          "desc": {"title": "A Dominant 7th", "body":""},
+          "structure": {"a4": {"pitch": "natural", "finger":"1"}, "c4": {"pitch": "sharp", "finger": "3"}, "e4": {"pitch": "natural", "finger": "4"}, "g4": {"pitch": "natural", "finger":"5"}}
+        }
+      },
+      "minor7th": {
+        "inversion0": {
+          "id": "amin7thinv0",
+          "name": "A",
+          "subtitle": "min 7th",
+          "desc": {"title":"A minor 7th", "body":""},
+          "structure": {"a4": {"pitch": "natural", "finger": "1"}, "c4": {"pitch": "natural", "finger": "3"}, "e4": {"pitch": "natural", "finger":"4"}, "g4":{"pitch":"natural", "finger":"5"}}
+        }
+      },
+      "flat5": {
+        "inversion0": {
+          "id": "aminflat5inv0",
+          "name": "A",
+          "subtitle": "flat 5",
+          "desc": {"title":"A minor flat 5", "body":""},
+          "structure": {"a4": {"pitch": "natural", "finger": "1"}, "c4": {"pitch": "natural", "finger": "3"}, "e4": {"pitch": "flat", "finger":"4"}, "g4":{"pitch":"natural", "finger":"5"}}
+        }
+      }
+    }
+  },
+  "bb": {
+    "triads": {
+      "major": {
+        "inversion0": {
+          "id": "bbmajinv0",
+          "name": "B♭",
+          "subtitle": "maj",
+          "desc": {"title":"B♭ major", "body":""},
+          "structure": {"b3": {"pitch": "flat", "finger":"1"}, "d3": {"pitch": "natural", "finger": "3"}, "f3": {"pitch": "natural", "finger": "5"}}
+        }
+      },
+      "minor": {
+        "inversion0": {
+          "id": "abmininv0",
+          "name": "B♭",
+          "subtitle": "min",
+          "desc": {"title":"B♭ minor", "body":""},
+          "structure": {"b3": {"pitch": "flat", "finger": "1"}, "d3": {"pitch": "flat", "finger": "3"}, "f3": {"pitch": "natural", "finger": "5"}}  
+        }
+      },
+      "dim": {
+        "inversion0": {
+          "id": "bbdiminv0",
+          "name": "B♭",
+          "subtitle": "dim",
+          "desc": {"title":"B♭ diminished", "body":""},
+          "structure": {"b3": {"pitch": "flat", "finger": "1"}, "d3": {"pitch": "flat", "finger": "3"}, "e3": {"pitch": "natural", "finger":"4"}}
+        }
+      }
+    },
+    "tetrads": {
+      "major7th": {
+        "inversion0": {
+          "id": "bbmaj7thinv0",
+          "name": "B♭",
+          "subtitle": "7th",
+          "desc": {"title":"B♭ major 7th", "body":""},
+          "structure": {"b3": {"pitch": "flat", "finger":"1"}, "d3": {"pitch": "natural", "finger": "3"}, "f3": {"pitch": "natural", "finger": "4"}, "a4": {"pitch": "natural", "finger":"5"}}
+        }
+      },
+      "dom7th": {
+        "inversion0": {
+          "id": "bbmajdom7thinv0",
+          "name": "B♭",
+          "subtitle": "dom 7th",
+          "desc": {"title": "B♭ Dominant 7th", "body":""},
+          "structure": {"b3": {"pitch": "flat", "finger":"1"}, "d3": {"pitch": "natural", "finger": "3"}, "f3": {"pitch": "natural", "finger": "4"}, "a4": {"pitch": "flat", "finger":"5"}}
+        }
+      },
+      "minor7th": {
+        "inversion0": {
+          "id": "bbmin7thinv0",
+          "name": "B♭",
+          "subtitle": "min 7th",
+          "desc": {"title":"B♭ minor 7th", "body":""},
+          "structure": {"b3": {"pitch": "flat", "finger": "1"}, "d3": {"pitch": "flat", "finger": "3"}, "f3": {"pitch": "natural", "finger":"4"}, "a4":{"pitch":"flat", "finger":"5"}}
+        }
+      },
+      "flat5": {
+        "inversion0": {
+          "id": "bbminflat5inv0",
+          "name": "B♭",
+          "subtitle": "flat 5",
+          "desc": {"title":"B♭ minor flat 5", "body":""},
+          "structure": {"b3": {"pitch": "flat", "finger": "1"}, "d3": {"pitch": "flat", "finger": "3"}, "e3": {"pitch": "natural", "finger":"4"}, "a4":{"pitch":"flat", "finger":"5"}}
+        }
+      }
+    }
+  },
+  "b": {
+    "triads": {
+      "major": {
+        "inversion0": {
+          "id": "bmajinv0",
+          "name": "B",
+          "subtitle": "maj",
+          "desc": {"title":"B major", "body":""},
+          "structure": {"b4": {"pitch": "natural", "finger":"1"}, "d4": {"pitch": "sharp", "finger": "3"}, "f4": {"pitch": "sharp", "finger": "5"}}
+        }
+      },
+      "minor": {
+        "inversion0": {
+          "id": "bmininv0",
+          "name": "B",
+          "subtitle": "min",
+          "desc": {"title":"B minor", "body":""},
+          "structure": {"b4": {"pitch": "natural", "finger": "1"}, "d4": {"pitch": "natural", "finger": "3"}, "f4": {"pitch": "sharp", "finger": "5"}}  
+        }
+      },
+      "dim": {
+        "inversion0": {
+          "id": "bdiminv0",
+          "name": "B",
+          "subtitle": "dim",
+          "desc": {"title":"B diminished", "body":""},
+          "structure": {"b4": {"pitch": "natural", "finger": "1"}, "d4": {"pitch": "natural", "finger": "3"}, "f4": {"pitch": "natural", "finger":"4"}}
+        }
+      }
+    },
+    "tetrads": {
+      "major7th": {
+        "inversion0": {
+          "id": "bmaj7thinv0",
+          "name": "B",
+          "subtitle": "7th",
+          "desc": {"title":"B major 7th", "body":""},
+          "structure": {"b4": {"pitch": "natural", "finger":"1"}, "d4": {"pitch": "sharp", "finger": "3"}, "f4": {"pitch": "sharp", "finger": "4"}, "a5": {"pitch": "sharp", "finger":"5"}}
+        }
+      },
+      "dom7th": {
+        "inversion0": {
+          "id": "bmajdom7thinv0",
+          "name": "B",
+          "subtitle": "dom 7th",
+          "desc": {"title": "B Dominant 7th", "body":""},
+          "structure": {"b4": {"pitch": "natural", "finger":"1"}, "d4": {"pitch": "sharp", "finger": "3"}, "f4": {"pitch": "sharp", "finger": "4"}, "a5": {"pitch": "natural", "finger":"5"}}
+        }
+      },
+      "minor7th": {
+        "inversion0": {
+          "id": "bmin7thinv0",
+          "name": "B",
+          "subtitle": "min 7th",
+          "desc": {"title":"B minor 7th", "body":""},
+          "structure": {"b4": {"pitch": "natural", "finger": "1"}, "d4": {"pitch": "natural", "finger": "3"}, "f4": {"pitch": "sharp", "finger":"4"}, "a5":{"pitch":"natural", "finger":"5"}}
+        }
+      },
+      "flat5": {
+        "inversion0": {
+          "id": "bminflat5inv0",
+          "name": "B",
+          "subtitle": "flat 5",
+          "desc": {"title":"B minor flat 5", "body":""},
+          "structure": {"b4": {"pitch": "natural", "finger": "1"}, "d4": {"pitch": "natural", "finger": "3"}, "f4": {"pitch": "natural", "finger":"4"}, "a5":{"pitch":"natural", "finger":"5"}}
+        }
+      }
+    }
   }
 }

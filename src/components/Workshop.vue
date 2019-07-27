@@ -2,7 +2,7 @@
   <div class="workshop">
     <Menu @settings="updateSettings"/>
     <div class="col">
-      <Metronome @tick="onTick"/>
+      <Metronome @tick="nextChord" :bus="bus"/>
       <Chord :bus="bus"/>
       <Notation :bus="bus"/>
     </div>
@@ -36,7 +36,9 @@ export default {
     return {
       settings: {},
       bus: new Vue(),
-      menuSettings: Menu.data
+      menuSettings: Menu.data,
+      oldKey: '',
+      oldChord: ['', '']
     }
   },
   components: {
@@ -49,91 +51,64 @@ export default {
     Description
   },
   mounted () {
-    /* Menu.$on('settings', (settings) => {
-      this.settings = settings
-    })
-     Metronome.$on('tick', (period) =>{
-      if (period === 'whole') {
-        let keys = []
-        for (let i in this.settings.keys) {
-          if (this.settings.keys) keys.push(i)
-        }
-        let key = keys[Math.floor(Math.random() * keys.length)]
-
-        let modes = []
-        for (let i in this.settings.modes) {
-          if (this.settings.modes) modes.push(i)
-        }
-        let mode = modes[Math.floor(Math.random() * modes.length)]
-
-        let chords = []
-        for (let i in this.settings.chords) {
-          if (this.settings.chords) chords.push(i)
-        }
-        let chord = chords[Math.floor(Math.random() * chords.length)]
-
-        let newChord = CHORDS[key][mode][chord]
-        this.bus.$emit('showChord', {
-          chord: newChord
-        })
-      }
-    })
-     this.bus.$emit('showChord', {
-      chord: {
-        id: 'fmajinv1',
-        name: 'F',
-        subtitle: 'maj',
-        desc: {title: 'F major', body: 'This is the F major chord that everyone uses, but it\'s actually the 1st inversion, as you can see in the Chromatic diagram.'},
-        structure: {f3: {pitch: 'natural', finger: '3'}, a4: {pitch: 'natural', finger: '5'}, c3: {pitch: 'natural', finger: '1'}}
-      }
-    }) */
     // setTimeout(this.nextChord, 5000)
+    this.nextChord('whole')
   },
   methods: {
-    nextChord: function () {
-      this.bus.$emit('showChord', {
-        chord: {
-          id: 'cmaj',
-          name: ' C',
-          subtitle: 'maj',
-          desc: {title: 'The classic C Major', body: 'This is the most common, and basic, chord, the root triad in the C major scale.'},
-          structure: {c3: {pitch: 'natural', finger: '1'}, e3: {pitch: 'natural', finger: '2'}, g3: {pitch: 'natural', finger: '3'}, a4: {pitch: 'sharp', finger: '5'}}
-        }
-      })
-    },
-    onTick: function (period) {
-      console.log('PERIOD')
+    // nextChord: function () {
+    //  this.bus.$emit('showChord', {chord: CHORDS['cs']['major']['tetrads']['7th']['inversion0']})
+    // },
+    nextChord: function (period) {
+    // "c":{ "major": { "triads": {  "root": {  "inversion0": {
+    //                 "tetrads": { "7th": {    "inversion0": {
+    //                              "dom7th": { "inversion0": {
+    //      "minor": { "triads": {  "root": {  "inversion0": {
+    //                              "dim": {    "inversion0": {
+    //                 "tetrads": { "7th": {    "inversion0": {
+    //                              "flat5": {  "inversion0": {
+
       if (period === 'whole') {
-        let keys = []
-        for (let i in this.settings.keys) {
-          if (this.settings.keys[i]) keys.push(i)
-        }
-        let key = keys[Math.floor(Math.random() * keys.length)]
+        let chordSet = false
+        do {
+          let keys = []
+          for (let i in this.settings.keys) {
+            if (this.settings.keys[i]) keys.push(i)
+          }
+          let key = keys[Math.floor(Math.random() * keys.length)]
 
-        let modes = []
-        for (let i in this.settings.modes) {
-          if (this.settings.modes[i]) modes.push(i)
-        }
-        let mode = modes[Math.floor(Math.random() * modes.length)]
+          let chords = []
+          for (let i in this.settings.chords_triad) {
+            if (this.settings.chords_triad[i]) chords.push(['triads', i])
+          }
+          // let chord_triad = chords_triad[Math.floor(Math.random() * chords_triad.length)]
 
-        let chords = []
-        for (let i in this.settings.chords) {
-          if (this.settings.chords[i]) chords.push(i)
-        }
-        let chord = chords[Math.floor(Math.random() * chords.length)]
+          for (let i in this.settings.chords_tetrad) {
+            if (this.settings.chords_tetrad[i]) chords.push(['tetrads', i])
+          }
+          let chord = chords[Math.floor(Math.random() * chords.length)]
 
-        console.log('key', key, ' mode', mode, ' chord', chord)
-
-        let newChord = CHORDS[key][mode][chord].inversion0
-        console.log('new chord:', newChord)
-        this.bus.$emit('showChord', {
-         chord: newChord
-        })
+          if (!((key === this.oldKey) && (chord[0] === this.oldChord[0]) && (chord[1] === this.oldChord[1])) &&
+            (CHORDS[key] && CHORDS[key][chord[0]] && CHORDS[key][chord[0]][chord[1]])) {
+            let newChord = CHORDS[key][chord[0]][chord[1]].inversion0
+            this.oldKey = key
+            this.oldChord = chord
+            this.bus.$emit('showChord', {
+              chord: newChord
+            })
+            chordSet = true
+          }
+        } while (!chordSet)
       }
     },
     updateSettings: function (settings) {
       this.settings = settings
-      console.log('Settings', this.settings)
+      let bpm = 0
+      for (let s in this.settings.speeds) {
+        if (this.settings.speeds[s]) {
+          bpm = parseInt(s)
+        }
+      }
+      this.bus.$emit('updateBPM', bpm)
     }
   }
 }
