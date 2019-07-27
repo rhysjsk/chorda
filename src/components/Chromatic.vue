@@ -381,24 +381,27 @@ export default {
   name: 'Chromatic',
   props: ['bus'],
   updated () {
-    let duration = 500
-    let delay = 500
-    anime({ targets: '.key-text[active="active"]', opacity: 1, easing: 'easeInOutCubic', delay: delay, duration: duration })
-    anime({ targets: '.key-text[active="inactive"]', opacity: 0.32, easing: 'easeInOutCubic', delay: delay, duration: duration })
-    anime({ targets: '.key-text[active="off"]', opacity: 0, easing: 'easeInOutCubic', delay: delay, duration: duration })
-    anime({ targets: 'ellipse[active="active"]', fill: '#ffffff', easing: 'easeInOutCubic', delay: delay, duration: duration })
-    anime({ targets: 'ellipse[active="inactive"]', fill: '#c7eff1', easing: 'easeInOutCubic', delay: delay, duration: duration })
+    let delay = 0
+    anime({ targets: '.key-text[active="active"]', opacity: 1, easing: 'easeInOutCubic', delay: delay, duration: this.duration })
+    anime({ targets: '.key-text[active="inactive"]', opacity: 0.32, easing: 'easeInOutCubic', delay: delay, duration: this.duration })
+    anime({ targets: '.key-text[active="off"]', opacity: 0, easing: 'easeInOutCubic', delay: delay, duration: this.duration })
+    anime({ targets: 'ellipse[active="active"]', fill: '#ffffff', easing: 'easeInOutCubic', delay: delay, duration: this.duration })
+    anime({ targets: 'ellipse[active="inactive"]', fill: '#c7eff1', easing: 'easeInOutCubic', delay: delay, duration: this.duration })
   },
   created () {
     this.bus.$on('showChord', (args) => {
       this.showChord(args.chord)
+    })
+    this.bus.$on('updateBPM', (speed) => {
+      this.duration = Math.round((60 / speed) * 250)
     })
   },
   data () {
     return {
       steps: [],
       notes: {c: 'off'},
-      increments: {root: 'off'}
+      increments: {root: 'off'},
+      duration: 1000
     }
   },
 
@@ -410,21 +413,8 @@ export default {
       for (let k in keys) {
         let key = k.slice(0, 1)
         let accent = keys[k].pitch
-        /* let accentShift = 0
-         switch (accent) {
-          case 'sharp':
-            if (key === 'e' || key === 'b') accentShift = 1
-            else accentShift = 0.5
-            break
-          case 'flat':
-            if (key === 'f' || key === 'c') accentShift = -1
-            else accentShift = -0.5
-            break
-        } */
-        // let keyCount = KEY_SEQUENCE.indexOf(key) + accentShift
         chord[KEY_INCREMENTS[c++]] = key + ((accent !== 'natural') ? accent : '')
       }
-      let duration = 1000
       let delay = 0
       let oldKeyStep = null
       let stepNum = 0
@@ -444,14 +434,25 @@ export default {
         delete dChord[key]
         break
       }
+
+      // Clear previous settings
+      for (let n in KEY_STEPS) {
+        for (let m in KEY_STEPS[n]) {
+          this.notes[KEY_STEPS[n][m]] = 'off'
+        }
+      }
+      for (let n in this.steps) {
+        this.steps[n] = 'inactive'
+      }
+
       let i = 0
       while (true) {
         let i2 = i % 12
         let keyStep = KEY_STEPS[i2]
         let j = null
         this.steps[i2] = 'inactive'
+        // key steps can have multiple keys signatures per step, e.g. index 1 is [bsharp, cflat]
         for (j = 0; j < keyStep.length; j++) {
-          this.notes[keyStep[j]] = 'off'
           if (currKey.key === keyStep[j]) {
             this.notes[keyStep[j]] = 'active'
             this.steps[i2] = 'active'
@@ -461,25 +462,30 @@ export default {
               let totalSteps = diffKeyStep
               for (let k = 0; k < totalSteps; k++) {
                 let rotatePart = i * STEP_ANG - diffKeyStep * STEP_ANG * 0.5 - diffKeyStep * K_STEP_ANG * 0.5 + k * K_STEP_ANG
-                anime({ targets: '#step-' + (k + stepNum), opacity: 1, rotate: rotatePart, easing: 'easeInOutCubic', delay: delay, duration: duration })
+                // animation of keystep circle colour
+                anime({ targets: '#step-' + (k + stepNum), opacity: 1, rotate: rotatePart, easing: 'easeInOutCubic', delay: delay, duration: this.duration })
               }
               stepNum += totalSteps
-              anime({ targets: '#circle-arc-' + arc, rotate: oldKeyStep * STEP_ANG, easing: 'easeInOutCubic', delay: delay, duration: duration })
-              anime({ targets: '#join-' + arc, rotate: [{value: oldKeyStep * STEP_ANG}, {value: oldKeyStep * STEP_ANG}], opacity: [{value: 0}, {value: 1}], easing: 'easeInOutCubic', delay: delay, duration: duration })
+
+              // Rotation of the outside arc, step indicators and join strokes
+              anime({ targets: '#circle-arc-' + arc, rotate: oldKeyStep * STEP_ANG, easing: 'easeInOutCubic', delay: delay, duration: this.duration })
+              anime({ targets: '#join-' + arc, rotate: [{value: oldKeyStep * STEP_ANG}, {value: oldKeyStep * STEP_ANG}], opacity: [{value: 0}, {value: 1}], easing: 'easeInOutCubic', delay: delay, duration: this.duration })
               anime({
                 targets: '#circle-arc-' + arc + ' path',
                 strokeDashoffset: [anime.setDashoffset, 0],
                 opacity: 1,
                 easing: 'easeInOutCubic',
-                duration: duration,
+                duration: this.duration,
                 delay: delay * 2
               })
             }
             oldKeyStep = i
             this.increments[currKey.chord] = 'active'
+
+            // Rotation of the outside text - 'root', '3rd' etc.
             let rotateAng = i * STEP_ANG
-            anime({ targets: '#' + currKey.chord + '-text-outer', rotate: rotateAng, easing: 'easeInOutCubic', delay: delay, duration: duration })
-            anime({ targets: '#' + currKey.chord + '-text-inner', rotate: -rotateAng, easing: 'easeInOutCubic', delay: delay, duration: duration })
+            anime({ targets: '#' + currKey.chord + '-text-outer', rotate: rotateAng, easing: 'easeInOutCubic', delay: delay, duration: this.duration })
+            anime({ targets: '#' + currKey.chord + '-text-inner', rotate: -rotateAng, easing: 'easeInOutCubic', delay: delay, duration: this.duration })
             if (Object.keys(dChord).length === 0) {
               currKey = null
               break
@@ -490,9 +496,6 @@ export default {
               break
             }
           }
-        }
-        if (this.steps[i2] !== 'active') {
-          this.notes[keyStep[j]] = (j === (keyStep.length - 1)) ? 'inactive' : 'off'
         }
         i++
         if (Object.keys(dChord).length === 0 && currKey === null) break
@@ -519,9 +522,6 @@ a {
 .text-outer, .text-inner, .circle-arc, .join-stroke {
   transform-origin:50% 50%;
 }
-/* #fifth-text-outer {
-  transform-origin:70px 235px;
-} */
 .circle-arc path {
   opacity: 0;
 }
