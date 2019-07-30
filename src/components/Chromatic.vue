@@ -444,6 +444,8 @@ export default {
       for (let n in this.steps) {
         this.steps[n] = 'inactive'
       }
+      anime({ targets: '.join-stroke, .circle-arc path, .step', opacity: 0, easing: 'easeInOutCubic', duration: 100 })
+      // $('.join-stroke').css('opacity', 0)
 
       let i = 0
       while (true) {
@@ -463,13 +465,16 @@ export default {
               for (let k = 0; k < totalSteps; k++) {
                 let rotatePart = i * STEP_ANG - diffKeyStep * STEP_ANG * 0.5 - diffKeyStep * K_STEP_ANG * 0.5 + k * K_STEP_ANG
                 // animation of keystep circle colour
+                anime.remove('#step-' + (k + stepNum))
                 anime({ targets: '#step-' + (k + stepNum), opacity: 1, rotate: rotatePart, easing: 'easeInOutCubic', delay: delay, duration: this.duration })
               }
               stepNum += totalSteps
 
               // Rotation of the outside arc, step indicators and join strokes
               anime({ targets: '#circle-arc-' + arc, rotate: oldKeyStep * STEP_ANG, easing: 'easeInOutCubic', delay: delay, duration: this.duration })
+              anime.remove('#join-' + arc)
               anime({ targets: '#join-' + arc, rotate: [{value: oldKeyStep * STEP_ANG}, {value: oldKeyStep * STEP_ANG}], opacity: [{value: 0}, {value: 1}], easing: 'easeInOutCubic', delay: delay, duration: this.duration })
+              anime.remove('#circle-arc-' + arc + ' path')
               anime({
                 targets: '#circle-arc-' + arc + ' path',
                 strokeDashoffset: [anime.setDashoffset, 0],

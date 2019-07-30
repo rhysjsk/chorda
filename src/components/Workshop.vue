@@ -1,16 +1,52 @@
 <template>
   <div class="workshop">
-    <Menu @settings="updateSettings"/>
+    <Menu @settings="updateSettings" data-intro="Chord Options"/>
     <div class="col">
-      <Metronome @tick="nextChord" :bus="bus"/>
-      <Chord :bus="bus"/>
-      <Notation :bus="bus"/>
+      <b-card>
+        <div slot="header">
+          Metronome
+          <b-button-close />
+        </div>
+        <Metronome @tick="nextChord" :bus="bus" data-intro="Metronone"/>
+      </b-card>
+      <b-card>
+        <div slot="header">
+          Chord Name
+          <b-button-close />
+        </div>
+        <Chord :bus="bus" data-intro="Chord Name"/>
+      </b-card>
+      <b-card>
+        <div slot="header">
+          Music Notation
+          <b-button-close />
+        </div>
+        <Notation :bus="bus" data-intro="Music Notation"/>
+      </b-card>
     </div>
     <div class="col">
-      <Keyboard :bus="bus"/>
+      <b-card>
+        <div slot="header">
+          Keyboard & Fingering
+          <b-button-close />
+        </div>
+        <Keyboard :bus="bus" data-intro="Keyboard"/>
+      </b-card>
       <div class="row">
-        <Chromatic :bus="bus"/>
-        <Description :bus="bus"/>
+        <b-card>
+          <div slot="header">
+            Chromatic Scale
+            <b-button-close />
+          </div>
+          <Chromatic :bus="bus" data-intro="Chromatic Scale"/>
+        </b-card>
+        <b-card>
+          <div slot="header">
+            Description
+            <b-button-close />
+          </div>
+          <Description :bus="bus" data-intro="Description"/>
+        </b-card>
         <div class="clearfix"></div>
       </div>
     </div>
@@ -29,6 +65,10 @@ import Chord from './Chord.vue'
 import Description from './Description.vue'
 import Vue from 'vue'
 import CHORDS from '../assets/chords.json'
+
+import introJs from 'intro.js'
+
+require('intro.js/introjs.css')
 
 export default {
   name: 'Workshop',
@@ -53,20 +93,11 @@ export default {
   mounted () {
     // setTimeout(this.nextChord, 5000)
     this.nextChord('whole')
+    introJs().start()
+    introJs().addHints()
   },
   methods: {
-    // nextChord: function () {
-    //  this.bus.$emit('showChord', {chord: CHORDS['cs']['major']['tetrads']['7th']['inversion0']})
-    // },
     nextChord: function (period) {
-    // "c":{ "major": { "triads": {  "root": {  "inversion0": {
-    //                 "tetrads": { "7th": {    "inversion0": {
-    //                              "dom7th": { "inversion0": {
-    //      "minor": { "triads": {  "root": {  "inversion0": {
-    //                              "dim": {    "inversion0": {
-    //                 "tetrads": { "7th": {    "inversion0": {
-    //                              "flat5": {  "inversion0": {
-
       if (period === 'whole') {
         let chordSet = false
         do {
@@ -81,9 +112,8 @@ export default {
             if (this.settings.chords_triad[i]) chords.push(['triads', i])
           }
           // let chord_triad = chords_triad[Math.floor(Math.random() * chords_triad.length)]
-
           for (let i in this.settings.chords_tetrad) {
-            if (this.settings.chords_tetrad[i]) chords.push(['tetrads', i])
+            if (this.settings.chords_tetrad[i]) chords.push(['tetrads', i.replace(/ /g, '')])
           }
           let chord = chords[Math.floor(Math.random() * chords.length)]
 
@@ -116,6 +146,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.workshop {
+  padding:2px 10px;
+}
 h1, h2 {
   font-weight: normal;
 }

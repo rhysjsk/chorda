@@ -1,6 +1,6 @@
 <template>
   <div id="menu">
-    <div id="options-styles" class="menu-row">
+    <div id="options-styles" class="menu-row presets">
       <div class="menu-title">
         Presets
       </div>
@@ -161,51 +161,6 @@ export default {
   }
 }
 </script>
-<style>
-#menu {
-  background-color: #1c6c70;
-  padding: 10px;
-}
-.menu-title {
-  color:white;
-  float:left;
-  width:80px;
-  text-align:right;
-  margin-right:10px;
-  padding:5px 0;
-  font-size:20px;
-}
-.menu-divider {
-  width:98%;
-  height:1px;
-  background-color: rgba(255,255,255,0.3);
-  margin:7px auto 5px;
-}
-.button {
-  background-color:#9cc8cb;
-  font-size:20px;
-  color:rgba(0,0,0,0.5);
-  padding:5px 10px;
-  margin:2px 2px 0 0;
-  float:left;
-  cursor:pointer;
-  text-align:center;
-}
-.button:hover {
-  background-color:#bcdadc;
-  color:black;
-}
-[state="selected"].button:hover {
-  background-color:#ddf5f7;
-}
-#options-styles [state="selected"]:hover {
-  background-color:white;
-}
-[state="selected"] {
-  background-color:white;
-  color:black;
-}
-.clearfix {
-  clear:both;
-}
+<style lang="scss" scoped>
+   @import 'menu.scss'
 </style>

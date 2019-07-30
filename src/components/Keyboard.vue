@@ -1,5 +1,11 @@
 <template>
   <div id="keyboard">
+    <div class="finger-text">
+      finger
+    </div>
+    <div class="note-text">
+      note
+    </div>
     <svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="250" width="840" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
     <g transform="scale(1.6, 1.6)">
       <g stroke="#202020" stroke-linecap="round" stroke-dasharray="none" stroke-miterlimit="4" stroke-width="1.28102171" transform="translate(0,-932.36218)">
@@ -170,6 +176,20 @@ export default {
 }
 [pitch="natural"] .natural-note {
   opacity: 1;
+}
+#keyboard {
+  position:relative;
+}
+.finger-text {
+  position: absolute;
+  left: 0px;
+  top: 9px;
+}
+
+.note-text {
+  position: absolute;
+  left: 0px;
+  bottom: 39px;
 }
 
 </style>

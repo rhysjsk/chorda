@@ -19,7 +19,7 @@
           "structure": {"c3": {"pitch": "natural", "finger": "1"}, "e3": {"pitch": "flat", "finger": "3"}, "g3": {"pitch": "natural", "finger": "5"}}  
         }
       },
-      "dim": {
+      "diminished": {
         "inversion0": {
           "id": "cdim",
           "name": "C",
@@ -39,7 +39,7 @@
           "structure": {"c3": {"pitch": "natural", "finger":"1"}, "e3": {"pitch": "natural", "finger": "3"}, "g3": {"pitch": "natural", "finger": "4"}, "b4": {"pitch": "natural", "finger":"5"}}
         }
       },
-      "dom7th": {
+      "dominant": {
         "inversion0": {
           "id": "cmajdom7thinv0",
           "name": "C",
@@ -88,7 +88,7 @@
           "structure": {"c3": {"pitch": "sharp", "finger": "1"}, "e3": {"pitch": "natural", "finger": "3"}, "g3": {"pitch": "sharp", "finger": "5"}}  
         }
       },
-      "dim": {
+      "diminished": {
         "inversion0": {
           "id": "csdiminv0",
           "name": "C#",
@@ -108,7 +108,7 @@
           "structure": {"c3": {"pitch": "sharp", "finger":"1"}, "f3": {"pitch": "natural", "finger": "3"}, "g3": {"pitch": "sharp", "finger": "4"}, "c4": {"pitch": "natural", "finger":"5"}}
         }
       },
-      "dom7th": {
+      "dominant": {
         "inversion0": {
           "id": "csmajdom7thinv0",
           "name": "C#",
@@ -157,7 +157,7 @@
           "structure": {"d3": {"pitch": "natural", "finger": "1"}, "f3": {"pitch": "natural", "finger": "3"}, "a4": {"pitch": "natural", "finger": "5"}}  
         }
       },
-      "dim": {
+      "diminished": {
         "inversion0": {
           "id": "ddiminv0",
           "name": "D",
@@ -177,7 +177,7 @@
           "structure": {"d3": {"pitch": "natural", "finger":"1"}, "f3": {"pitch": "sharp", "finger": "3"}, "a4": {"pitch": "natural", "finger": "4"}, "c4": {"pitch": "sharp", "finger":"5"}}
         }
       },
-      "dom7th": {
+      "dominant": {
         "inversion0": {
           "id": "dmajdom7thinv0",
           "name": "D",
@@ -226,7 +226,7 @@
           "structure": {"e3": {"pitch": "flat", "finger": "1"}, "g3": {"pitch": "flat", "finger": "3"}, "b4": {"pitch": "flat", "finger": "5"}}  
         }
       },
-      "dim": {
+      "diminished": {
         "inversion0": {
           "id": "ebdiminv0",
           "name": "E♭",
@@ -246,7 +246,7 @@
           "structure": {"e3": {"pitch": "flat", "finger":"1"}, "g3": {"pitch": "natural", "finger": "3"}, "b4": {"pitch": "flat", "finger": "4"}, "d4": {"pitch": "natural", "finger":"5"}}
         }
       },
-      "dom7th": {
+      "dominant": {
         "inversion0": {
           "id": "ebmajdom7thinv0",
           "name": "E♭",
@@ -295,7 +295,7 @@
           "structure": {"e3": {"pitch": "natural", "finger": "1"}, "g3": {"pitch": "natural", "finger": "3"}, "b4": {"pitch": "natural", "finger": "5"}}  
         }
       },
-      "dim": {
+      "diminished": {
         "inversion0": {
           "id": "ediminv0",
           "name": "E",
@@ -315,7 +315,7 @@
           "structure": {"e3": {"pitch": "natural", "finger":"1"}, "g3": {"pitch": "sharp", "finger": "3"}, "b4": {"pitch": "natural", "finger": "4"}, "d4": {"pitch": "sharp", "finger":"5"}}
         }
       },
-      "dom7th": {
+      "dominant": {
         "inversion0": {
           "id": "emajdom7thinv0",
           "name": "E",
@@ -364,7 +364,7 @@
           "structure": {"f3": {"pitch": "natural", "finger": "1"}, "a4": {"pitch": "flat", "finger": "3"}, "c4": {"pitch": "natural", "finger": "5"}}  
         }
       },
-      "dim": {
+      "diminished": {
         "inversion0": {
           "id": "fdiminv0",
           "name": "F",
@@ -384,7 +384,7 @@
           "structure": {"f3": {"pitch": "natural", "finger":"1"}, "a4": {"pitch": "natural", "finger": "3"}, "c4": {"pitch": "natural", "finger": "4"}, "e4": {"pitch": "natural", "finger":"5"}}
         }
       },
-      "dom7th": {
+      "dominant": {
         "inversion0": {
           "id": "fmajdom7thinv0",
           "name": "F",
@@ -433,7 +433,7 @@
           "structure": {"f3": {"pitch": "sharp", "finger": "1"}, "a4": {"pitch": "natural", "finger": "3"}, "c4": {"pitch": "sharp", "finger": "5"}}  
         }
       },
-      "dim": {
+      "diminished": {
         "inversion0": {
           "id": "fsdiminv0",
           "name": "F#",
@@ -453,7 +453,7 @@
           "structure": {"f3": {"pitch": "sharp", "finger":"1"}, "a4": {"pitch": "sharp", "finger": "3"}, "c4": {"pitch": "sharp", "finger": "4"}, "e4": {"pitch": "sharp", "finger":"5"}}
         }
       },
-      "dom7th": {
+      "dominant": {
         "inversion0": {
           "id": "fsmajdom7thinv0",
           "name": "F#",
@@ -502,7 +502,7 @@
           "structure": {"g3": {"pitch": "natural", "finger": "1"}, "b4": {"pitch": "flat", "finger": "3"}, "d4": {"pitch": "natural", "finger": "5"}}  
         }
       },
-      "dim": {
+      "diminished": {
         "inversion0": {
           "id": "gdiminv0",
           "name": "G",
@@ -522,7 +522,7 @@
           "structure": {"g3": {"pitch": "natural", "finger":"1"}, "b4": {"pitch": "natural", "finger": "2"}, "d4": {"pitch": "natural", "finger": "3"}, "f4": {"pitch": "sharp", "finger":"5"}}
         }
       },
-      "dom7th": {
+      "dominant": {
         "inversion0": {
           "id": "gmajdom7thinv0",
           "name": "G",
@@ -571,7 +571,7 @@
           "structure": {"a4": {"pitch": "flat", "finger": "1"}, "b4": {"pitch": "natural", "finger": "3"}, "e4": {"pitch": "flat", "finger": "5"}}  
         }
       },
-      "dim": {
+      "diminished": {
         "inversion0": {
           "id": "abdiminv0",
           "name": "A♭",
@@ -591,7 +591,7 @@
           "structure": {"a4": {"pitch": "flat", "finger":"1"}, "c4": {"pitch": "natural", "finger": "3"}, "e4": {"pitch": "flat", "finger": "4"}, "g4": {"pitch": "natural", "finger":"5"}}
         }
       },
-      "dom7th": {
+      "dominant": {
         "inversion0": {
           "id": "abmajdom7thinv0",
           "name": "A♭",
@@ -640,7 +640,7 @@
           "structure": {"a4": {"pitch": "natural", "finger": "1"}, "c4": {"pitch": "natural", "finger": "3"}, "e4": {"pitch": "natural", "finger": "5"}}  
         }
       },
-      "dim": {
+      "diminished": {
         "inversion0": {
           "id": "adiminv0",
           "name": "A",
@@ -660,7 +660,7 @@
           "structure": {"a4": {"pitch": "natural", "finger":"1"}, "c4": {"pitch": "sharp", "finger": "3"}, "e4": {"pitch": "natural", "finger": "4"}, "g4": {"pitch": "sharp", "finger":"5"}}
         }
       },
-      "dom7th": {
+      "dominant": {
         "inversion0": {
           "id": "amajdom7thinv0",
           "name": "A",
@@ -709,7 +709,7 @@
           "structure": {"b3": {"pitch": "flat", "finger": "1"}, "d3": {"pitch": "flat", "finger": "3"}, "f3": {"pitch": "natural", "finger": "5"}}  
         }
       },
-      "dim": {
+      "diminished": {
         "inversion0": {
           "id": "bbdiminv0",
           "name": "B♭",
@@ -729,7 +729,7 @@
           "structure": {"b3": {"pitch": "flat", "finger":"1"}, "d3": {"pitch": "natural", "finger": "3"}, "f3": {"pitch": "natural", "finger": "4"}, "a4": {"pitch": "natural", "finger":"5"}}
         }
       },
-      "dom7th": {
+      "dominant": {
         "inversion0": {
           "id": "bbmajdom7thinv0",
           "name": "B♭",
@@ -778,7 +778,7 @@
           "structure": {"b4": {"pitch": "natural", "finger": "1"}, "d4": {"pitch": "natural", "finger": "3"}, "f4": {"pitch": "sharp", "finger": "5"}}  
         }
       },
-      "dim": {
+      "diminished": {
         "inversion0": {
           "id": "bdiminv0",
           "name": "B",
@@ -798,7 +798,7 @@
           "structure": {"b4": {"pitch": "natural", "finger":"1"}, "d4": {"pitch": "sharp", "finger": "3"}, "f4": {"pitch": "sharp", "finger": "4"}, "a5": {"pitch": "sharp", "finger":"5"}}
         }
       },
-      "dom7th": {
+      "dominant": {
         "inversion0": {
           "id": "bmajdom7thinv0",
           "name": "B",

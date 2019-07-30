@@ -4,9 +4,14 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import App from './App'
 import router from './router'
+import BootstrapVue from 'bootstrap-vue'
 
 Vue.use(Vuex)
+Vue.use(BootstrapVue)
+
 Vue.config.productionTip = false
+
+import './custom.scss'
 
 const store = new Vuex.Store({
   state: {

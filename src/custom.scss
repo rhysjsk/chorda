@@ -1,0 +1,35 @@
+@import 'bootstrap/dist/css/bootstrap.css';
+@import 'bootstrap-vue/dist/bootstrap-vue.css';
+
+.bg-light {
+	background-color: white !important;
+}
+
+.card {
+	border:0;
+	.card-header {
+		padding:0 0 0 5px;
+		background-color:transparent;
+		border:0;
+		button {
+		    padding: 0 6px 1px;
+    		background-color: rgba(255,255,255,0.8);
+    		border: 0;
+    		border-radius: 3px;
+			opacity:0;
+			&:hover {
+				opacity:1;
+			}
+
+		}
+		&:hover {
+			background-color:#e8e8e8;
+			button {
+				opacity:0.5;
+			}
+		}
+	}
+	.card-body {
+		padding:0;
+	}
+}

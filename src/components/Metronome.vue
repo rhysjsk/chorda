@@ -22,7 +22,8 @@ export default {
       playState: 'paused',
       audioState: 'on',
       tickCount: 0,
-      tickSound: null
+      tickSound: null,
+      beatSound: null
     }
   },
   created () {
@@ -39,6 +40,7 @@ export default {
   },
   mounted () {
     this.tickSound = new Audio('../../static/tick.ogg')
+    this.beatSound = new Audio('../../static/beat.ogg')
   },
   watch: {
     playState: function (val) {
@@ -67,8 +69,10 @@ export default {
       if (this.tickCount >= 4) {
         this.$emit('tick', 'whole')
         this.tickCount = 0
+        if (this.audioState === 'on') this.tickSound.play()
+      } else {
+        if (this.audioState === 'on') this.beatSound.play()
       }
-      if (this.audioState === 'on') this.tickSound.play()
     },
     setBPM: function (num) {
       this.BPM = num
